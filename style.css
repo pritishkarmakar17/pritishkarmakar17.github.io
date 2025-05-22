@@ -390,6 +390,7 @@ figure img {
 }
 
 figcaption {
+  font-size: 1em;
   display: table-caption; 
   caption-side: bottom ;
   text-align: center;
@@ -463,18 +464,11 @@ figcaption {
     gap: 6px;
   }
 
-  figure {
-    font-size: 0.75em;
-  }
 
   figure img {
     height: 120px;
   }
 
-  figcaption {
-    line-height: 1.2;
-    padding: 0 4px;
-  }
 
   .typing-effect {
     font-size: 1.2em;
