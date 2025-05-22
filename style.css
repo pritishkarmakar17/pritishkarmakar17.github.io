@@ -1,0 +1,518 @@
+
+/*--------------
+# Preloader
+---------------*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: hidden;
+  background: #1e1e1e;
+}
+
+#preloader:before {
+  content: "";
+  position: fixed;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  border: 6px solid #00ff66;
+  border-top-color: #232323;
+  border-bottom-color: #232323;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation: animate-preloader 1s linear infinite;
+  animation: animate-preloader 1s linear infinite;
+}
+
+@-webkit-keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate-preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*----------------
+# Disable aos animation delay on mobile devices
+----------------*/
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}
+
+
+
+body {
+  font-family: "Roboto Mono", monospace;
+  margin: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  background: #1e1e1e;
+  color: #00ff66;
+  transition: background 0.3s, color 0.3s;
+  /*text-align: justify;*/
+  max-width: 768px;
+  margin: auto;
+  padding: 3em;
+}
+
+main {
+  margin-left: 2%;
+  width: 95%;
+  padding-top: 1em; /* To offset fixed nav height */
+  align-items: center;
+}
+
+/*--------------
+Page Fade-In 
+-------------------*/
+body {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+
+
+
+/*------------
+Navbar
+----------------*/
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  position: fixed;
+  top: 0;
+  margin-right: -1em;
+  background: #1e1e1e;
+  padding: 0.8em 0;
+  z-index: 100;
+  width: 95%; /* full viewport width */
+  /*border-bottom: 1px solid #00ff66;  optional  divider */
+}
+
+nav a {
+  margin-right: 1em;
+  text-decoration: none;
+  color: #00ffcc;
+  text-align: center;
+}
+nav a:hover {
+  color: #00ff66;
+  text-decoration: none;
+}
+
+nav a.active-link {
+  color: #000000;
+  background: #00ff66;
+  padding: 0.2em 0.5em;
+  border-radius: 5px;
+  font-weight: bold;
+  text-shadow: 0 0 5px #00ffcc7a;
+}
+
+
+
+a {
+  color: #00ffff; 
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00ff66; 
+  text-shadow: 0 0 5px #00ff66, 0 0 10px #00ff66;
+  
+}
+
+
+a:focus {
+  outline: 1.5px dashed #00ff66;
+  outline-offset: 1.5px;
+}
+
+
+ul {
+  font-size: large;
+}
+p {
+  font-size: medium;
+}
+
+
+h1,h2 {
+  font-family: 'Courier New', Courier, Consolas Bold, monospace;
+  font-weight: bold;
+}
+
+ul li::before {
+  content: "▌"; /* ⮞ or ▶, ✓, →, etc. */
+  color: #00ff66;
+  font-weight: bold;
+  margin-right: 10px;
+}
+ul {
+  margin-left: 10px;
+  list-style: none;
+  padding-left: 0;
+}
+
+section, .card {
+  background: #1a1a1a;
+  padding: 1em;
+  border-left: 2px solid #00ff66;
+  box-shadow: 0 0 10px rgba(0, 255, 102, 0.2);
+  margin-bottom: 2em;
+}
+
+.ascii {
+  font-family: monospace;
+  color: #00ff66;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.dashed-line {
+  border-top: 1px dashed #00ff66;
+  margin: 2em 0;
+  opacity: 0.3;
+}
+
+/*---------------
+Events
+------------------*/
+.event-log {
+  margin-top: 20px;
+}
+
+.event-entry {
+  margin-top: -10px;
+  margin-bottom: 5px;
+}
+
+
+
+/*---------------
+toggle show + hide details
+------------------*/
+
+.toggle-btn {  
+  background: none;
+  border: 1px dashed #00ff66;
+  color: #00ff66;
+  padding: 0.3em 0.8em;
+  font-family: "Roboto Mono", monospace;
+  margin-top: 2px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.toggle-btn:hover {
+  background: #00ff66;
+  color: #1e1e1e;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+/*---------------
+Cursor Effect
+------------------*/
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  height: 1em; /* ensures vertical space */
+  background-color: #00ff66;
+  animation: blink 1s step-start infinite;
+  vertical-align: bottom;
+}
+
+@keyframes blink {
+  50% { background-color: transparent; }
+}
+
+/*---------------
+Blinking Animation for Any Element
+------------------*/
+
+.blinker {
+  animation: blinkText 1s steps(2, start) infinite;
+}
+
+@keyframes blinkText {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+
+/*---------------
+Typing Animation (Terminal Style)
+------------------*/
+.typewriter {
+  display: block;
+  font-family: 'Roboto Mono', monospace;
+  white-space: pre-wrap;      /* allows wrapping and \n support */
+  word-break: break-word;    /* breaks long words to avoid overflow */
+  border-right: 0px solid #00ff66;
+  animation: blink-caret 0.75s step-end infinite;
+  max-width: 100%;
+  line-height: 1.5;
+  font-size: 1em;
+  color: #00ff66;
+}
+
+
+@keyframes typing {
+  from { width: 0ch; }
+  to { width: 22ch; } /* <- Match your text length */
+}
+
+@keyframes blink-caret {
+  50% { border-color: transparent; }
+}
+
+.typewriter {
+  margin-top: -5px;
+}
+
+
+/*-------------------
+Webkit browsers 
+-------------------------*/
+::-webkit-scrollbar {
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+::-webkit-scrollbar-thumb {
+  background: #00ff66;
+  border-radius: 3px;
+}
+
+
+/*------------------
+Photo Gallery
+------------------------*/
+.photo-gallery {
+  width: auto;
+  overflow-x: auto;
+  white-space: nowrap;
+  border-radius: 0px;
+  margin: 10px;
+  scroll-behavior: smooth;
+  padding-bottom: 5px; /* spacing between photos and scrollbar */
+}
+
+.scrolling-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.scrolling-wrapper img {
+  height: 150px; /* Set the height of each image */
+  margin-right: 10px; /* Adjust the spacing between images */
+  border-radius: 0px;
+  border: 2px solid #00ff66;
+  align-items: center;
+  display: inline-flex; /* inline makes width match content */
+}
+.photo-gallery {
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent; 
+}
+
+/* WebKit (Chrome, Edge, Safari) scrollbar styles */
+.photo-gallery::-webkit-scrollbar {
+  margin-top: 2px;
+  height: 20px; /* Horizontal scrollbar height */
+}
+
+.photo-gallery::-webkit-scrollbar-track {
+  background: #1e1e1e; /* Track background */
+}
+
+.photo-gallery::-webkit-scrollbar-thumb {
+  background: #00ff66; /* Scrollbar thumb color */
+  border-radius: 4px;
+}
+
+/* Optional: For Firefox */
+.photo-gallery {
+  scrollbar-width: 20px;
+  scrollbar-color: #00ff66 #1e1e1e;
+}
+
+figure {
+  display: table;
+  margin: 0;
+  text-align: center;
+  color: #00ff66;
+  font-size: 0.8em;
+  font-family: "Roboto Mono", monospace;
+  align-items: center;
+}
+
+figure img {
+  display: block;
+  height: 150px;
+  width: auto; 
+  border: 2px solid #00ff66;
+  border-radius: 0px;
+  margin-bottom: 5px;
+}
+
+figcaption {
+  display: table-caption; 
+  caption-side: bottom ;
+  text-align: center;
+  margin-top: -5px;
+  margin-left: 2px;
+  margin-right: 12px;
+  margin-bottom: 10px;
+  line-height: 1.2;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+
+
+
+
+
+
+
+
+
+
+/* ------------------
+   Responsive: Phones & Tablets
+--------------------- */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 1.5em;
+    font-size: 0.95em;
+    margin-top: 3em;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: #1e1e1e;
+    padding: 0.8em 1em;
+    flex-direction: row;
+    flex-wrap: wrap;         
+    gap: .6em;
+    z-index: 999;
+  }
+  
+
+  nav a {
+    flex: 0 1 auto;         
+    white-space: nowrap;
+    font-size: 1em;
+    margin-right: 0.5em;
+  }
+
+  
+
+  .photo-gallery {
+    padding-bottom: 8px;
+  }
+
+  .scrolling-wrapper {
+    gap: 6px;
+  }
+
+  figure {
+    font-size: 0.75em;
+  }
+
+  figure img {
+    height: 120px;
+  }
+
+  figcaption {
+    line-height: 1.2;
+    padding: 0 4px;
+  }
+
+  .typing-effect {
+    font-size: 1.2em;
+  }
+
+  .card,
+  section {
+    padding: 0.8em;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    background: #1e1e1e;
+    padding: 0.8em 1em;
+    flex-direction: row;
+    flex-wrap: wrap;         
+    gap: .6em;
+    z-index: 999;
+  }
+
+  figure img {
+    height: 100px;
+  }
+
+  
+
+  nav a {
+    font-size: 0.95em;
+  }
+
+  .typing-effect {
+    font-size: 1em;
+  }
+
+  .scroll-btn {
+    font-size: 1.2em;
+    padding: 0.2em 0.5em;
+  }
+
+  
+}
+
+
