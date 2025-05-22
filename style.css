@@ -404,7 +404,17 @@ figcaption {
 
 
 
+/* ------------------
+   quote
+--------------------- */
 
+#quoteBox {
+  font-size: 1em; /* 👈 change this to your desired size */
+  font-style: italic;
+  color: #00ff66;
+  padding: 0.7em;
+  margin: 1em 0;
+}
 
 
 
@@ -493,6 +503,25 @@ figcaption {
     z-index: 999;
   }
 
+  
+  ul {
+    font-size: 0.9em;
+  }
+  p {
+    font-size: 0.9em;
+  }
+
+  h2 {
+    font-size: 1.1em;
+  }
+  h3 {
+    font-size: 1em;
+  }
+  h4 {
+    font-size: 0.9em;
+  }
+
+
   figure img {
     height: 100px;
   }
@@ -512,7 +541,15 @@ figcaption {
     padding: 0.2em 0.5em;
   }
 
-  
+  #quoteBox {
+    font-size: 0.8em; /* 👈 change this to your desired size */
+    font-style: italic;
+    color: #00ff66;
+    padding: 0.7em;
+    margin: 1em 0;
+  }
+
+
 }
 
 
