@@ -371,13 +371,15 @@ Photo Gallery
 }
 
 figure {
-  display: table;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
   text-align: center;
   color: #00ff66;
   font-size: 0.8em;
   font-family: "Roboto Mono", monospace;
   align-items: center;
+  width: fit-content;
 }
 
 figure img {
@@ -391,8 +393,7 @@ figure img {
 
 figcaption {
   font-size: 1em;
-  display: table-caption; 
-  caption-side: bottom ;
+  display: block;
   text-align: center;
   margin-top: -5px;
   margin-left: 2px;
@@ -401,6 +402,15 @@ figcaption {
   line-height: 1.2;
   white-space: normal;
   overflow-wrap: break-word;
+  width: 100%;
+  padding: 2px 2px;
+  /* Lazy load fade-in */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+figcaption.visible {
+  opacity: 1;
 }
 
 

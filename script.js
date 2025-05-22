@@ -45,6 +45,23 @@ const lazyloadImages = document.querySelectorAll(".lazy-load");
       img.setAttribute("src", img.getAttribute("data-src"));
     });
   });
+
+//Lazy reveal
+  document.querySelectorAll("figure").forEach(figure => {
+    const img = figure.querySelector("img");
+    const caption = figure.querySelector("figcaption");
+
+    if (img && caption) {
+      img.addEventListener("load", () => {
+        caption.classList.add("visible");
+      });
+
+      // In case image is already cached and instantly available
+      if (img.complete && img.naturalHeight !== 0) {
+        caption.classList.add("visible");
+      }
+    }
+  });
   
   
 // Preloader
