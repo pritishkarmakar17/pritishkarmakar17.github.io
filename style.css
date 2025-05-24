@@ -557,6 +557,10 @@ figcaption.visible {
     font-size: 0.95em;
   }
 
+  .typewriter {
+    font-size: 0.8em;
+  }
+
   .typing-effect {
     font-size: 1em;
   }
