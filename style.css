@@ -185,10 +185,17 @@ section, .card {
 }
 
 .ascii {
-  font-family: monospace;
+  font-family: monospace, "Courier New", Courier;
   color: #00ff66;
   font-size: 14px;
   line-height: 1.2;
+  white-space: pre;         /* Important: preserves spacing + prevents wrapping */
+  overflow-x: auto;         /* Allows sideways scroll if too wide */
+  display: block;
+  margin: 1em auto;
+  text-align: left;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .dashed-line {
@@ -566,7 +573,9 @@ figcaption.visible {
     padding: 0.7em;
     margin: 1em 0;
   }
-
+  .ascii {
+    font-size: 12px;
+  }
 
 }
 
