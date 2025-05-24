@@ -26,6 +26,8 @@ function typeWriterEffect(el, speed = 50) {
     });
   });
 
+
+
 // Highlight the active link in navbar
 document.addEventListener("DOMContentLoaded", function () {
     const navLinks = document.querySelectorAll('nav a');
@@ -63,6 +65,16 @@ const lazyloadImages = document.querySelectorAll(".lazy-load");
     }
   });
   
+
+
+//pending links
+document.querySelectorAll(".pending-link").forEach(link => {
+  link.addEventListener("click", function (e) {
+    e.preventDefault(); // Stop the link from navigating
+    alert("🚧 Temporarily unavailable — under maintenance.");
+  });
+});
+
   
 // Preloader
   
@@ -131,14 +143,63 @@ const quotes = [
   "In every job that must be done, there is an element of fun. — Mary Poppins, Mary Poppins (1964)",
   "Beginnings are usually scary, and endings are usually sad. But it's everything in between that makes it all worth living. — Birdee Pruitt, Hope Floats (1998)",
   "It does not do to dwell on dreams and forget to live. — Dumbledore, Harry Potter and the Sorcerer's Stone (2001)",
-  "You have to do everything you can. You have to work your hardest, and if you stay positive, you have a shot at a silver lining. — Pat Solitano, Silver Linings Playbook (2012)",
   "You mustn't be afraid to dream a little bigger, darling. — Eames, Inception (2010)",
   "Why do we fall, sir? So that we can learn to pick ourselves up. — Alfred Pennyworth, Batman Begins (2005)",
-  "It’s not who I am underneath, but what I do that defines me. — Bruce Wayne, Batman Begins (2005)"
+  "It’s not who I am underneath, but what I do that defines me. — Bruce Wayne, Batman Begins (2005)",
+  "There's a difference between knowing the path and walking the path. — Morpheus, The Matrix (1999)",
+  "All we have to decide is what to do with the time that is given to us. — Gandalf, The Lord of the Rings: The Fellowship of the Ring (2001)",
+  "Life is not the amount of breaths you take, it's the moments that take your breath away. — Alex 'Hitch' Hitchens, Hitch (2005)",
+  "You get what you settle for. — Louise Sawyer, Thelma & Louise (1991)",
+  "Fear is the mind-killer. — Paul Atreides, Dune (2021)",
+  "The flower that blooms in adversity is the most rare and beautiful of all. — The Emperor, Mulan (1998)",
+  "You have to let it all go, Neo. Fear, doubt, and disbelief. Free your mind. — Morpheus, The Matrix (1999)",
+  "The world ain't all sunshine and rainbows. It is a very mean and nasty place, and it will beat you to your knees and keep you there permanently if you let it. — Rocky Balboa, Rocky Balboa (2006)",
+  "You have to do everything you can. You have to work your hardest, and if you stay positive, you have a shot at a silver lining. — Pat Solitano, Silver Linings Playbook (2012)",
+  "It takes a great deal of bravery to stand up to our enemies, but just as much to stand up to our friends. — Albus Dumbledore, Harry Potter and the Sorcerer's Stone (2001)",
+  "Of course it is happening inside your head, Harry, but why on earth should that mean it is not real? — Albus Dumbledore, Harry Potter and the Deathly Hallows - Part 2 (2011)",
+  "I feel the need—the need for speed! — Pete 'Maverick' Mitchell, Top Gun (1986)",
+  "Life is like a box of chocolates. You never know what you're gonna get. — Forrest Gump, Forrest Gump (1994)",
+  "You don't understand! I coulda had class. I coulda been a contender. I could've been somebody, instead of a bum, which is what I am. — Terry Malloy, On the Waterfront (1954)",
+  "Greed, for lack of a better word, is good. — Gordon Gekko, Wall Street (1987)",
+  "Keep your friends close, but your enemies closer. — Michael Corleone, The Godfather Part II (1974)",
+  "The perfect blossom is a rare thing. You could spend your life looking for one, and it would not be a wasted life. — Katsumoto, The Last Samurai (2003)",
+  "I think a man does what he can, until his destiny is revealed. — Nathan Algren, The Last Samurai (2003)"
 ]
 
 
-  const quoteBox = document.getElementById("quoteBox");
-  const randomIndex = Math.floor(Math.random() * quotes.length);
-  quoteBox.textContent = quotes[randomIndex];
+const quoteBox = document.getElementById("quoteBox");
+const TOTAL_TYPING_TIME = 2000; // Total time for typing (2s)
+const HOLD_TIME = 5000;          // Time to wait after typing finishes
+
+function typeWriter(text, element, callback) {
+  element.textContent = "";
+  let i = 0;
+
+  // Dynamically calculate speed so total time = TOTAL_TYPING_TIME
+  //const speed = Math.max(10, TOTAL_TYPING_TIME / text.length);
+  const speed = 30
+  function type() {
+    if (i < text.length) {
+      element.textContent += text.charAt(i);
+      i++;
+      setTimeout(type, speed);
+    } else {
+      if (callback) callback();
+    }
+  }
+
+  type();
+}
+
+function cycleQuotes(index = 0) {
+  const quote = quotes[index % quotes.length];
+  typeWriter(quote, quoteBox, () => {
+    setTimeout(() => {
+      cycleQuotes(index + 1);
+    }, HOLD_TIME);
+  });
+}
+
+// Start the cycle
+cycleQuotes();
 

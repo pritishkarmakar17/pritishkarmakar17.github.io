@@ -153,9 +153,6 @@ a:focus {
 }
 
 
-ul {
-  font-size: large;
-}
 p {
   font-size: medium;
 }
@@ -173,6 +170,7 @@ ul li::before {
   margin-right: 10px;
 }
 ul {
+  font-size: medium;
   margin-left: 10px;
   list-style: none;
   padding-left: 0;
@@ -209,6 +207,15 @@ Events
 .event-entry {
   margin-top: -10px;
   margin-bottom: 5px;
+}
+
+/*---------------
+pending links
+------------------*/
+.pending-link {
+  opacity: 0.6;
+  cursor: not-allowed;
+  text-decoration: underline dotted;
 }
 
 
@@ -258,6 +265,7 @@ Cursor Effect
 
 /*---------------
 Blinking Animation for Any Element
+html: <span class="blinker">▶</span>
 ------------------*/
 
 .blinker {
@@ -270,10 +278,12 @@ Blinking Animation for Any Element
 }
 
 
+
 /*---------------
 Typing Animation (Terminal Style)
 ------------------*/
 .typewriter {
+  padding-bottom: 0.8em;
   display: block;
   font-family: 'Roboto Mono', monospace;
   white-space: pre-wrap;      /* allows wrapping and \n support */
@@ -420,11 +430,15 @@ figcaption.visible {
 --------------------- */
 
 #quoteBox {
-  font-size: 1em; /* 👈 change this to your desired size */
+  font-size: 1em;
   font-style: italic;
   color: #00ff66;
   padding: 0.7em;
   margin: 1em 0;
+  font-family: 'Roboto Mono', monospace;
+  white-space: pre-wrap;
+  word-break: break-word;
+  min-height: 3em; /* reserve height to prevent jump */
 }
 
 
@@ -546,7 +560,7 @@ figcaption.visible {
   }
 
   #quoteBox {
-    font-size: 0.8em; /* 👈 change this to your desired size */
+    font-size: 0.8em; 
     font-style: italic;
     color: #00ff66;
     padding: 0.7em;
