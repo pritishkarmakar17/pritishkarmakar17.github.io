@@ -436,20 +436,25 @@ figcaption.visible {
    quote
 --------------------- */
 
+
 #quoteBox {
-  font-size: 1em;
-  font-style: italic;
   color: #00ff66;
   padding: 0.7em;
   margin: 1em 0;
   font-family: 'Roboto Mono', monospace;
-  white-space: pre-wrap;
-  word-break: break-word;
   min-height: 3em; /* reserve height to prevent jump */
 }
 
+#quoteText {
+  font-size: 1em;
+  display: block;
+  font-style: italic;
+}
 
-
+#quoteSource {
+  font-size: 0.8em;
+  color: #00ffaa;
+}
 
 
 
