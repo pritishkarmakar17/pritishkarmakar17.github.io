@@ -317,7 +317,7 @@ const quoteText = document.getElementById("quoteText");
 const quoteSource = document.getElementById("quoteSource");
 
 const TOTAL_TYPING_TIME = 2000;
-const HOLD_TIME = 6000;
+const HOLD_TIME = 5000;
 
 function typeWriter(text, element, speed, callback) {
   element.textContent = "";
@@ -336,18 +336,22 @@ function typeWriter(text, element, speed, callback) {
   type();
 }
 
-function showRandomQuote(index = 0) {
+function showQuoteAtIndex(index) {
   const quote = quotes[index % quotes.length];
-  
   // Dynamically calculate speed so total time = TOTAL_TYPING_TIME
   //const speed = Math.max(10, TOTAL_TYPING_TIME / quote.text.length);
-  const speed = 30
-
+  const speed = 60;
   quoteSource.innerHTML = `— <em>${quote.source}</em>`;
 
   typeWriter(quote.text, quoteText, speed, () => {
-    setTimeout(() => showRandomQuote(index + 1), HOLD_TIME);
+    setTimeout(() => showQuoteAtIndex(index + 1), HOLD_TIME);
   });
 }
 
-showRandomQuote();
+function showRandomQuoteFirst() {
+  const randomIndex = Math.floor(Math.random() * quotes.length);
+  showQuoteAtIndex(randomIndex);
+}
+
+// Start the quote cycle
+showRandomQuoteFirst();
