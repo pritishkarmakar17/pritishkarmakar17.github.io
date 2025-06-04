@@ -340,7 +340,7 @@ function showQuoteAtIndex(index) {
   const quote = quotes[index % quotes.length];
   // Dynamically calculate speed so total time = TOTAL_TYPING_TIME
   //const speed = Math.max(10, TOTAL_TYPING_TIME / quote.text.length);
-  const speed = 60;
+  const speed = 50;
   quoteSource.innerHTML = `— <em>${quote.source}</em>`;
 
   typeWriter(quote.text, quoteText, speed, () => {
