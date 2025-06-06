@@ -149,7 +149,7 @@ a:hover {
 
 a:focus {
   outline: 1.5px dashed #00ff66;
-  outline-offset: 1.5px;
+  outline-offset: 0.1px;
 }
 
 
@@ -171,7 +171,7 @@ ul li::before {
 }
 ul {
   font-size: medium;
-  margin-left: 10px;
+  margin-left: 5px;
   list-style: none;
   padding-left: 0;
 }
@@ -520,11 +520,12 @@ figcaption.visible {
 @media screen and (max-width: 480px) {
   
   nav {
+    font-size: smaller;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    width: 100vw;
+    width: 95vw;
     background: #1e1e1e;
     padding: 0.8em 1em;
     flex-direction: row;
