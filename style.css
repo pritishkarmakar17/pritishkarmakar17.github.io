@@ -176,12 +176,22 @@ ul {
   padding-left: 0;
 }
 
-section, .card {
+.card {
   background: #1a1a1a;
   padding: 1em;
   border-left: 2px solid #00ff66;
   box-shadow: 0 0 10px rgba(0, 255, 102, 0.2);
   margin-bottom: 2em;
+}
+
+.card2 {
+  background: #1a1a1a;
+  padding: 1em;
+  border: 2px dashed #00ff66;
+  border-radius: 1em;
+  margin-bottom: 2em;
+  display: block; /* Ensure it behaves as a block element */
+  overflow: hidden; /* This will hide any text that overflows */
 }
 
 strong {
@@ -207,6 +217,7 @@ strong {
   margin: 2em 0;
   opacity: 0.3;
 }
+
 
 /*---------------
 Events
@@ -340,6 +351,24 @@ Webkit browsers
 /*------------------
 Photo Gallery
 ------------------------*/
+.image-box {
+  width: 150px;      
+  height: 150px;      
+  border: 2px solid #00ff66; 
+  border-radius: 50%; 
+  overflow: hidden;   
+  margin: 2em;   
+}
+
+.image-box img {
+  width: 100%;  
+  height: 100%;  
+  object-fit: cover;  
+  object-position: center;
+  
+}
+
+
 .photo-gallery {
   width: auto;
   overflow-x: auto;
@@ -447,6 +476,7 @@ figcaption.visible {
   margin: 1em 0;
   font-family: 'Roboto Mono', monospace;
   min-height: 3em; /* reserve height to prevent jump */
+  
 }
 
 #quoteText {
@@ -514,7 +544,7 @@ figcaption.visible {
     font-size: 1.2em;
   }
 
-  .card,
+  .card, .card2
   section {
     padding: 0.8em;
   }
@@ -547,7 +577,7 @@ figcaption.visible {
   }
 
   h2 {
-    font-size: 1.1em;
+    font-size: 1.2em;
   }
   h3 {
     font-size: 1em;

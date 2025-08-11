@@ -113,7 +113,7 @@ function toggleDetails(button) {
 
 //JavaScript for random quote 
   
-const quotes = [
+const quotes2 = [
   {
     text: "Carpe diem. Seize the day, boys. Make your lives extraordinary.",
     source: "John Keating, *Dead Poets Society* (1989)"
@@ -311,6 +311,132 @@ const quotes = [
     source: "Nathan Algren, *The Last Samurai* (2003)"
   }
 ];
+
+const quotes = [
+  {
+    text: "The unexamined life is not worth living.",
+    source: "Socrates"
+  },
+  {
+    text: "I think, therefore I am.",
+    source: "René Descartes"
+  },
+  {
+    text: "Man is condemned to be free; because once thrown into the world, he is responsible for everything he does.",
+    source: "Jean-Paul Sartre" // His major works are pre-late 20th century.
+  },
+  {
+    text: "He who has a why to live can bear almost any how.",
+    source: "Friedrich Nietzsche"
+  },
+  {
+    text: "The only true wisdom is in knowing you know nothing.",
+    source: "Socrates"
+  },
+  {
+    text: "We are what we repeatedly do. Excellence, then, is not an act, but a habit.",
+    source: "Aristotle"
+  },
+  {
+    text: "To be is to do.",
+    source: "Socrates"
+  },
+  {
+    text: "To do is to be.",
+    source: "Jean-Paul Sartre" // Consistent with the above rationale.
+  },
+  {
+    text: "To be or not to be, that is the question.",
+    source: "William Shakespeare"
+  },
+  {
+    text: "All that is solid melts into air.",
+    source: "Karl Marx"
+  },
+  {
+    text: "The mind is its own place, and in itself can make a heaven of hell, a hell of heaven.",
+    source: "John Milton"
+  },
+  {
+    text: "Live as if you were to die tomorrow. Learn as if you were to live forever.",
+    source: "Mahatma Gandhi" // Died 1948, so fits the criteria.
+  },
+  {
+    text: "The greatest happiness of life is the conviction that we are loved; loved for ourselves, or rather, loved in spite of ourselves.",
+    source: "Victor Hugo"
+  },
+  {
+    text: "Do not weep; do not wax indignant. Understand.",
+    source: "Baruch Spinoza"
+  },
+  {
+    text: "It is not what happens to you, but how you react to it that matters.",
+    source: "Epictetus"
+  },
+  {
+    text: "Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world, stimulating progress, giving birth to evolution.",
+    source: "Albert Einstein" // Died 1955, major work pre-late 20th.
+  },
+  {
+    text: "The world is my representation.",
+    source: "Arthur Schopenhauer"
+  },
+  {
+    text: "The journey of a thousand miles begins with a single step.",
+    source: "Lao Tzu"
+  },
+  {
+    text: "Everything that exists is born for no reason, continues to exist through weakness, and dies by accident.",
+    source: "Jean-Paul Sartre" // Consistent with above rationale.
+  },
+  {
+    text: "Life must be understood backward; but it must be lived forward.",
+    source: "Søren Kierkegaard"
+  },
+  {
+    text: "To live is to suffer, to survive is to find some meaning in the suffering.",
+    source: "Friedrich Nietzsche"
+  },
+  {
+    text: "The future belongs to those who believe in the beauty of their dreams.",
+    source: "Eleanor Roosevelt" // Died 1962, so technically pre-late 20th.
+  },
+  {
+    text: "We are too much accustomed to attribute to a single cause that which is the product of several, and, on the other hand, to attribute to several causes that which is the product of a single one.",
+    source: "Auguste Comte"
+  },
+  {
+    text: "The greatest test of courage on earth is to bear defeat without losing heart.",
+    source: "Robert Green Ingersoll"
+  },
+  {
+    text: "In three words I can sum up everything I've learned about life: it goes on.",
+    source: "Robert Frost"
+  },
+  {
+    text: "The soul is not in the body, but the body in the soul.",
+    source: "Ralph Waldo Emerson"
+  },
+  {
+    text: "One cannot step twice in the same river.",
+    source: "Heraclitus"
+  }
+  // Added some classical and early modern thinkers to fill up the count
+  ,
+  {
+    text: "No man's knowledge here can go beyond his experience.",
+    source: "John Locke"
+  },
+  {
+    text: "God is dead. God remains dead. And we have killed him.",
+    source: "Friedrich Nietzsche"
+  },
+  {
+    text: "What is rational is actual and what is actual is rational.",
+    source: "G.W.F. Hegel"
+  }
+];
+
 
 const quoteBox = document.getElementById("quoteBox");
 const quoteText = document.getElementById("quoteText");
