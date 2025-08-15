@@ -428,10 +428,6 @@ const quotes = [
     source: "John Locke"
   },
   {
-    text: "God is dead. God remains dead. And we have killed him.",
-    source: "Friedrich Nietzsche"
-  },
-  {
     text: "What is rational is actual and what is actual is rational.",
     source: "G.W.F. Hegel"
   }
