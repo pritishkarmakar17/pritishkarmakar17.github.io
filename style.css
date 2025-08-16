@@ -220,7 +220,7 @@ strong {
 
 .ascii {
   font-family: monospace, "Courier New", Courier;
-  color: #00ff66;
+  color: #ffffff;
   font-size: 14px;
   line-height: 1.2;
   white-space: pre;         /* Important: preserves spacing + prevents wrapping */
