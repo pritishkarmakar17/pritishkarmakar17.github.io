@@ -4,19 +4,28 @@ document.addEventListener('DOMContentLoaded', () => {
     lightbox.classList.add('lightbox');
     document.body.appendChild(lightbox);
 
-    // Update this array to include objects with 'src' and 'description'
+    // Updating array
     const images = [
-        { src: 'assets/img/iism24_1.jpg', description: 'Description for Illustration 1.' },
-        { src: 'assets/img/iism24_2.jpg', description: 'A portrait with vibrant colors.' },
-        { src: 'assets/img/iism24_3.jpg', description: 'An illustration of a fantasy landscape.' }
-        // Add all your image objects here
+        { src: 'assets/portfolio/jojo.png', description: 'Movie: Jojo rabbit.' },
+        { src: 'assets/portfolio/sea.png', description: ''},
+        { src: 'assets/portfolio/cult.png', description: 'sample logo'},
+        { src: 'assets/portfolio/om.png', description: 'sample logo'},
+        { src: 'assets/portfolio/walk.png', description: ''},
+        { src: 'assets/portfolio/jack.png', description: ''},
+        { src: 'assets/portfolio/sama.png', description: ''},
+        { src: 'assets/portfolio/kid.png', description: ''},
+        { src: 'assets/portfolio/m.png', description: ''},
+        { src: 'assets/portfolio/night.png', description: ''},
+        { src: 'assets/portfolio/fight.png', description: ''},
+        { src: 'assets/portfolio/oldman.png', description: ''},
+        { src: 'assets/portfolio/incom.png', description: 'incomplete !'},
     ];
 
     // Dynamically create gallery items
     images.forEach(imageObj => {
         const item = document.createElement('div');
         item.classList.add('gallery-item');
-        item.innerHTML = `<img src="${imageObj.src}" alt="${imageObj.description}">`;
+        item.innerHTML = `<img src="${imageObj.src}" alt="${imageObj.description}" loading="lazy">`;
         gallery.appendChild(item);
     });
 
@@ -30,17 +39,24 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    
     function showImage(index) {
         const imageObj = images[index];
+        
+        // Conditionally create the description HTML
+        const descriptionHtml = imageObj.description 
+            ? `<p class="lightbox-description">${imageObj.description}</p>`
+            : ''; // Renders nothing if the description is empty
+
         lightbox.innerHTML = `
             <span class="close-btn">&times;</span>
             <img class="lightbox-content" src="${imageObj.src}">
-            <p class="lightbox-description">${imageObj.description}</p>
-            <a class="prev-btn">&#10094;</a>
-            <a class="next-btn">&#10095;</a>
+            ${descriptionHtml} 
+            <a class="prev-btn" aria-label="Previous Image">&#10094;</a>
+            <a class="next-btn" aria-label="Next Image">&#10095;</a>
         `;
         lightbox.style.display = 'flex';
-    }
+}
 
     lightbox.addEventListener('click', (e) => {
         if (e.target.classList.contains('close-btn')) {
