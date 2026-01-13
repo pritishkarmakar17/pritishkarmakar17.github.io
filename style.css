@@ -61,10 +61,7 @@
 
 body {
   font-family: "Roboto Mono", monospace;
-  margin: 1em;
-  margin-left: 1em;
-  margin-right: 1em;
-  background: #1e1e1e;
+  background: #444444;
   color: #00ff66;
   transition: background 0.3s, color 0.3s;
   /*text-align: justify;*/
@@ -74,10 +71,8 @@ body {
 }
 
 main {
-  margin-left: 2%;
   width: 95%;
-  padding-top: 1em; /* To offset fixed nav height */
-  align-items: center;
+  padding-top: 1em; 
 }
 
 /*--------------
@@ -103,13 +98,18 @@ nav {
   flex-wrap: wrap;
   gap: 1em;
   position: fixed;
+  max-width: 90%;
+  margin: auto;
+  background: #1e1e1ecb;
+  padding: 0.8em 10%;
+  border-bottom: 1px solid #00ff66a3;  
   top: 0;
-  margin-right: -1em;
-  background: #1e1e1e;
-  padding: 0.8em 0;
-  z-index: 100;
-  width: 95%; /* full viewport width */
-  /*border-bottom: 1px solid #00ff66;  optional  divider */
+  left: 0;
+  right: 0;
+  flex-direction: row;
+  z-index: 999;
+  justify-content: center; /* Centers items horizontally (along the row) */
+  align-items: center;     /* Centers items vertically (top to bottom) */
 }
 
 nav a {
@@ -166,6 +166,9 @@ h2 {
   font-family: 'Courier New', Courier, Consolas Bold, monospace;
   font-weight: bold;
   color: #00ffff;
+  padding: 0.2em 0.2em;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 
@@ -176,7 +179,7 @@ h4 {
   padding: 0.2em 0.2em;
   padding-left: 0.5em;
   padding-right: 0.5em;
-  margin: -1em 0.4em;
+  margin-top: 0;
   display: inline-block;
 }
 
@@ -243,11 +246,11 @@ strong {
 Events
 ------------------*/
 .event-log {
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 .event-entry {
-  margin-top: -10px;
+  margin-top: 5px;
   margin-bottom: 5px;
 }
 
@@ -272,7 +275,7 @@ toggle show + hide details
   color: #659779;
   padding: 0.3em 0.8em;
   font-family: "Roboto Mono", monospace;
-  margin-top: 2px;
+  /* margin-top: 10px; */
   cursor: pointer;
   transition: 0.3s ease;
 }
@@ -527,9 +530,8 @@ figcaption.visible {
     top: 0;
     left: 0;
     right: 0;
-    width: 100vw;
     background: #1e1e1e;
-    padding: 0.8em 1em;
+    padding: 0.8em 10%;
     flex-direction: row;
     flex-wrap: wrap;         
     gap: .6em;
@@ -579,7 +581,7 @@ figcaption.visible {
     top: 0;
     left: 0;
     right: 0;
-    width: 95vw;
+    width: 94%;
     background: #1e1e1e;
     padding: 0.8em 1em;
     flex-direction: row;
