@@ -1,5 +1,6 @@
 // script.js
 
+
 // typewriter effect
 // This code grabs the data-text from any element and animates it:
 // html: <pre class="typewriter" data-text=">> Booting kernel..."></pre>

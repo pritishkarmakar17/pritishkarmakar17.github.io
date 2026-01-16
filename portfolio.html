@@ -3,19 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/img/favicon2.png">
     <title>&#128444; Portfolio</title>
     <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="gallery.css"> </head>
 <body>
 
     <main>
         <h1>Digital Illustrations <span class="cursor"></span></h1>
-        <p>&copy; Pritish Karmakar. All rights reserved.</p>
-        <ul>
-            <li>Contact: <a href="mailto:pritishkarmakar17@gmail.com" >pritishkarmakar17@gmail.com</a></li>
+         <ul>
+            <li> <a href="index.html" >Back to Homepage.</a></li>
         </ul>
+        <section class="card"> 
+            <p>&copy; Pritish Karmakar. All rights reserved.</p>
+            <ul>
+                <li>Contact: <a href="mailto:pritishkarmakar17@gmail.com" >pritishkarmakar17@gmail.com</a></li>
+            </ul>
+        </section>
         
+
         <div class="gallery-container">
-            </div>
+        </div>
+
+        <section class="card2" style="position: relative; ">
+        <h3 style="position: relative; z-index: 2;">
+            No AI was used in the conceptualization or illustration process.
+        </h3>
+
+        <!-- background image overlay -->
+        <span style="
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('assets/img/no_ai.png') no-repeat right 1.5rem center / 60px auto;
+            opacity: 0.6;
+            pointer-events: none;
+            z-index: 1;
+        "></span>
+        </section>
     </main>
 
     <script src="gallery.js"></script> </body>
