@@ -73,6 +73,7 @@ body {
 main {
   width: 95%;
   padding-top: 1em; 
+  padding-bottom: 5em;
 }
 
 /*--------------
@@ -434,14 +435,14 @@ Photo Gallery
 }
 
 .photo-gallery::-webkit-scrollbar-thumb {
-  background: #00ff66; /* Scrollbar thumb color */
+  background: #00ff6692; /* Scrollbar thumb color */
   border-radius: 4px;
 }
 
 /* Optional: For Firefox */
 .photo-gallery {
   scrollbar-width: 20px;
-  scrollbar-color: #00ff66 #1e1e1e;
+  scrollbar-color: #00ff6692 #1e1e1e;
 }
 
 figure {
@@ -514,6 +515,44 @@ figcaption.visible {
   color: #00ffaa;
 }
 
+
+/* ------------------------------
+Back to Top Button Styling
+--------------------------- */
+
+#terminalTopBtn {
+    display: none;             /* Hidden until user scrolls */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    
+    /* Terminal Visuals */
+    background-color: #000000aa;
+    color:#00ff66;
+    border: 2px solid #00ff408f;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 8px 8px;
+    cursor: pointer;
+    border-radius: 5px;       
+    text-transform: uppercase;
+    /* box-shadow: 4px 4px 0px #003b0f; */
+    transition: all 0.2s ease;
+}
+
+#terminalTopBtn:hover {
+    background-color: #00FF41;
+    color: #000000;
+    box-shadow: 4px 4px 0px #003b0f;
+    transform: translate(2px, 2px);
+}
+
+
+@keyframes terminalCursor {
+    50% { opacity: 0; }
+}
 
 
 /* ------------------

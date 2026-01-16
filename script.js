@@ -109,7 +109,43 @@ function toggleDetails(button) {
       gallery.scrollLeft += e.deltaY;
     });
   });
-  
+
+// Mouse wheel scroll feature in ascii
+
+const asciiBlocks = document.querySelectorAll('.ascii');
+
+asciiBlocks.forEach(block => {
+    block.addEventListener('wheel', (evt) => {
+        // Only trigger if the content is actually wide enough to scroll
+        if (block.scrollWidth > block.clientWidth) {
+            evt.preventDefault(); // Stop the main page from scrolling down
+            block.scrollLeft += evt.deltaY; // Move the block sideways instead
+        }
+    }, { passive: false });
+});
+
+// Back to top button
+
+const scrollBtn = document.getElementById("terminalTopBtn");
+
+if (scrollBtn) {
+    // Show button when user scrolls down 400px
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            scrollBtn.style.display = "block";
+        } else {
+            scrollBtn.style.display = "none";
+        }
+    });
+
+    // Smooth scroll to top on click
+    scrollBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+    });
+}
 
 
 //JavaScript for random quote 
