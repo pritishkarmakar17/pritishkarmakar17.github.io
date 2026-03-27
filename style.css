@@ -374,8 +374,9 @@ Webkit browsers
 
 
 /*------------------
-Photo Gallery
+image box
 ------------------------*/
+
 .image-box {
   width: 170px;      
   height: 170px;      
@@ -392,6 +393,31 @@ Photo Gallery
   object-position: center;
   
 }
+
+
+.img-single {
+  background-color: transparent; 
+  text-align: center; 
+  overflow-x: auto;         /* Allows sideways scroll if too wide */
+  display: block;
+  margin: 1em auto;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.img-single img{
+  width: 70%;  
+  height: auto;        
+  display: inline-block; 
+  object-fit: contain; 
+  object-position: center;
+}
+
+
+
+/*------------------
+Photo Gallery
+------------------------*/
 
 
 .photo-gallery {
