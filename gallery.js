@@ -6,10 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Updating array
     const images = [
+        { src: 'assets/portfolio/photon_scatter.gif', description: 'Animation 64x64 pixel' },
         { src: 'assets/portfolio/jojo.png', description: 'Movie: Jojo rabbit.' },
         { src: 'assets/portfolio/sea.png', description: ''},
-        { src: 'assets/portfolio/cult.png', description: 'sample logo'},
-        { src: 'assets/portfolio/om.png', description: 'sample logo'},
+        { src: 'assets/portfolio/cult.png', description: 'Logo'},
+        { src: 'assets/portfolio/om.png', description: 'Logo'},
         { src: 'assets/portfolio/walk.png', description: ''},
         { src: 'assets/portfolio/jack.png', description: ''},
         { src: 'assets/portfolio/sama.png', description: ''},
