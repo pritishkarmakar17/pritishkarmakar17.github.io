@@ -467,7 +467,7 @@ Photo Gallery
 
 /* Optional: For Firefox */
 .photo-gallery {
-  scrollbar-width: 20px;
+  scrollbar-width: thin;
   scrollbar-color: #00ff6692 #1e1e1e;
 }
 
@@ -712,6 +712,31 @@ Back to Top Button Styling
     font-size: 12px;
   }
 
+}
+
+/*Scroll bar*/
+/* Modern Standard */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #4a4a4a #1a1a1a;
+}
+
+/* WebKit (Chrome/Safari/Edge) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a4a4a;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #666;
 }
 
 

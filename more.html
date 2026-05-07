@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+
+  <title>&#8546; Pritish</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+
+  <script>
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      });
+  </script>
+  
+
+  <main>
+  <h1>More Stuff <span class="cursor"></span></h1>
+
+
+  <section class="card">
+    <article class="event-entry">
+      <h2>Lecture Notes : </h2>
+      <ul>
+        <li><em>Yet to upload ...</em></li>
+      </ul>
+    </article>
+  </section>
+
+      <!--<div class="dashed-line"></div>-->
+  </main>
+  
+    <button id="terminalTopBtn" title="Return to Top">To Top</button>
+
+  <script src="script.js" defer></script>
+
+</body>
+<div id="preloader"></div>
+</html>

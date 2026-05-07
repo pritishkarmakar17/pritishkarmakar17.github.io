@@ -8,14 +8,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="corner.html">More</a>
-    <a href="project.html">Works</a>
-    <a href="events.html">Events</a>
-    <a href="contact.html">Contact</a>
-</nav>
+  <div id="nav-placeholder"></div>
+
+  <script>
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      });
+  </script>
   
 
   <main>
@@ -31,7 +32,6 @@
     <P>I love football, and I get a lot of my creative energy from art, movies, and music.</p>
 
   <ul>
-    </li>
     <li> <strong>In:</strong>
       <span>IISER Kolkata, India, 741246.</span></li>
     <li> <strong>Résumé:</strong>
@@ -82,6 +82,172 @@
     </div>
     </article>
   </section>
+
+    <section class="card">
+<article class="event-entry">
+  <h3>What I’m passionate about:</h3>
+  <h2>FOOTBALL</h2>
+  <button class="toggle-btn" onclick="toggleDetails(this)">[+] Expand Details</button>
+
+  <div class="hidden">
+
+    <p>
+      Football has always been a big part of my life — both on and off the field. I've represented FCIK, the official football club of IISER Kolkata, in several competitive matches. Our team has proudly participated in tournaments like the Inter Institute Sports Meet (IISM), including the 2023 meet in Thiruvananthapuram, the 2024 meet in Pune and 2025 meet in Beharampur(more in <a href="events.html">Events</a>). My preferred role is as a midfielder.
+    </p>
+    <p>
+      Beyond playing, I regularly follow this beautiful sport. Who could forget those incredible Champions League nights? CR7 has been my favorite player. His mentality and determination inspire me — both in sports and in life.
+    </p>
+
+
+  </div>
+
+  <h2>ART & ILLUSTRATIONS</h2>
+  <button class="toggle-btn" onclick="toggleDetails(this)">[+] Expand Details</button>
+
+  <div class="hidden">
+
+    <p>
+      I'm a self-taught artist, and I work on both traditional and digital medium. I use Krita for digital art. You can check out my digital artworks on my <a href="portfolio.html" target="_blank">portfolio page</a> —feel free to take a look!
+      For commission artwork contact through email.
+    </p>
+
+
+  </div>
+
+  <h2>MUSIC</h2>
+  <button class="toggle-btn" onclick="toggleDetails(this)">[+] Expand Details</button>
+
+  <div class="hidden">
+    <p>
+      Music has always been a constant in my life, even as my taste continues to evolve. I enjoy listening a wide range of genres. I’m always exploring new sounds, experimenting with what resonates me. Visit my playlists  in <a href="https://open.spotify.com/user/phadgd2gcs1v2tvzom624mgtw?si=zotYvNEYRCeh6seRuYvVxg" target="_blank"><i>Spotify</i></a>, if it resonates with you.
+    </p>
+
+  </div>
+
+  <h2>MOVIES</h2>
+  <button class="toggle-btn" onclick="toggleDetails(this)">[+] Expand Details</button>
+
+  <div class="hidden">
+    <p>
+      My taste spans across action, romance, drama, slice-of-life stories, epic fantasy.
+    </p>
+    <p>Recommended Films :</p>
+    <ul>
+      <li><em>Seven Years in Tibet (1997)</em></li>
+      <li><em>Good Will Hunting (1997)</em></li>
+      <li><em>Dead Poets Society (1989)</em></li>
+      <li><em>A Beautiful Mind (2001)</em></li>
+      <li><em>Interstellar (2014)</em></li>
+      <li><em>Ford v Ferrari (2019)</em></li>
+      <li><em>The Last Samurai (2003)</em></li>
+      <li><em>The Intouchables (2011)</em></li>
+	  <li><em>3-Iron (2004)</em></li>
+	  <li><em>Spring, Summer, Autumn, Winter... and Spring (2003)</em></li>
+	  <li><em>Scent of a Woman (1992)</em></li>
+      <li><em>Your Name (2016, Animation)</em></li>
+	  <li><em>I Want to Eat Your Pancreas (2018, Animation)</em></li>
+	  <li><em>Grave of the Fireflies (1988, Animation)</em></li>
+	  <li><em>Gladiator (2000)</em></li>
+	  <li><em>Kingdom of Heaven (2005)</em></li>
+	  <li><em>The Martian (2015)</em></li>
+	  <li><em>Jojo Rabbit (2019)</em></li>
+	  <li><em>Manchester by the Sea (2016)</em></li>
+    </ul>
+
+    <p>Movie sequels :</p>
+    <ul>
+      <li><em>Star Wars</em></li>
+      <li><em>Harry Potter </em></li>
+      <li><em>The Lord of the Rings Trilogy</em></li>
+      <li><em>The Dark Knight Trilogy</em></li>
+      <li><em>Mission: Impossible</em></li>
+      <li><em>Top Gun </em></li>
+      <li><em>James Bond 007 </em></li>
+      <li><em>Jason Bourne </em></li>
+      <li><em>Pirates of the Caribbean </em></li>
+      <li><em>Fast & Furious </em></li>
+      <li><em>The Matrix </em></li>
+      <li><em>John Wick </em></li>
+      <li><em>Before Trilogy</em></li>
+      <li><em>The Equalizer</em></li>
+	  <li><em>IP Man</em></li>
+	  <li><em>How to Train Your Dragon</em></li>
+	  <li><em>Spider-Man</em></li>
+    </ul>
+
+    <p>Series :</p>
+    <ul>
+      <li><em>Game of Thrones</em></li>
+	  <li><em>When Life Gives You Tangerines (2025)</em> </li>
+	  <li><em>Shōgun (2024)</em></li>
+    </ul>
+
+    <p>
+      These are some of the best movies and series I’ve watched (Indian movies are not included simply because there are too many). It’s not a complete list - just what I could recall from memory. Sharing it for anyone looking for something to watch while eating. I’m always open to great movie or series recommendations.
+    </p>
+
+  </div>
+
+  <h2>GAMES</h2>
+  <button class="toggle-btn" onclick="toggleDetails(this)">[+] Expand Details</button>
+
+  <div class="hidden">
+    <p>
+      I love games that make me think. My favorite types of games are puzzles, logic challenges, and physics simulators. I enjoy titles where I have to solve a problem, build something, or find a clever way to win. I usually prefer indie games with unique art styles and smart mechanics. If a game is about strategy, or creative problem-solving, I’m probably playing it!
+    </p>
+      <p>Old school puzzle : </p>
+      <ul>
+          <li><a href="https://hodoku.sourceforge.net/en/index.php"  target="_blank"><em>Sudoku</em></a></li>
+          <li><a href="https://minesweepergame.com/download/viennasweeper.php" target="_blank"><em>Minesweeper</em></a></li></em></a></li>
+      </ul>
+
+      <p>(Steam) Games recommendation :</p>
+        <ul>
+          <li><a href="https://store.steampowered.com/app/1062160/Poly_Bridge_2/" target="_blank"><em>Poly Bridge 2</em></a></li>
+          <li><a href="https://store.steampowered.com/app/1850160/Poly_Bridge_3/" target="_blank"><em>Poly Bridge 3</em></a></li>
+          <li><a href="https://store.steampowered.com/app/1145360/Hades/"  target="_blank"><em>Hades</em></a></li>
+          <li><a href="https://store.steampowered.com/app/1145350/Hades_II/" target="_blank"><em>Hades II</em></a></li>
+          <li><a href="https://store.steampowered.com/app/304430/INSIDE/" target="_blank"><em>INSIDE</em></a></li>
+          <li><a href="https://store.steampowered.com/app/48000/LIMBO/" target="_blank"><em>Limbo</em></a></li>
+          <li><a href="https://store.steampowered.com/app/2379780/Balatro/" target="_blank"><em>Balatro</em></a></li>
+          <li><a href="https://store.steampowered.com/app/3897800/Poker_Night_at_the_Inventory/" target="_blank"><em>Poker Night at the Inventory</em></a></li>
+          <li><a href="https://store.steampowered.com/app/1804270/Swordship/" target="_blank"><em>Swordship</em></a></li>
+          <li><a href="https://store.steampowered.com/app/1876590/I_Am_Your_Beast/" target="_blank"><em>I Am Your Beast</em></a></li>
+          <li><a href="https://store.steampowered.com/app/304410/Hexcells_Infinite/" target="_blank"><em>Hexcells Infinite</em></a></li>
+          <li><a href="https://store.steampowered.com/app/3856460/Cursed_Words_The_Word_Game_That_Isnt/" target="_blank"><em>Cursed Words</em></a></li>
+        </ul>
+    <p style="font-size: small"><em>You do not need NVDIA GPU in your laptop to play these games - these are very lightweight. My laptop specs :<br>
+      CPU: Intel(R) Core(TM) Ultra 5 225H (14) @ 4.90 GHz<br>
+      iGPU: Intel(R) Graphics @ 2.20 GHz
+    </em></p>
+
+
+
+  </div>
+
+  </article>
+  </section>
+  <!--<pre class="ascii">
+             __
+  .-.__     |\ .-.  ___  __
+  |_|  '--.-.-(   \/\;;\_\.-._______.-.
+  (-)___     \ \ .-\ \;;\(   \       \ \
+   Y    '---._\_((Q)) \;;\\ .-\     __(_)
+   I           __'-' / .--.((Q))---'    \,
+   I     ___.-:    \|  |   \'-'_          \
+   I  .-'      \ .-.\   \   \ \ '--.__     '\
+   |  |____.----((Q))\   \__|--\_      \     '
+      ( )        '-'  \_  :  \-' '--.___\
+       Y                \  \  \       \(_)
+       I                 \  \  \         \,
+       I                  \  \  \          \
+       I                   \  \  \          '\
+       |                    \  \__|           '
+                             \_:.  \
+                               \ \  \
+                                \ \  \
+                                 \_\_|
+   </pre>-->
   
   </main>
 

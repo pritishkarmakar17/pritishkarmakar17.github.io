@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Updating array
     const images = [
-        { src: 'assets/portfolio/photon_scatter.gif', description: 'Animation 64x64 pixel' },
+        // { src: 'assets/portfolio/photon_scatter.gif', description: 'Animation 64x64 pixel' },
         { src: 'assets/portfolio/jojo.png', description: 'Movie: Jojo rabbit.' },
         { src: 'assets/portfolio/sea.png', description: ''},
         { src: 'assets/portfolio/cult.png', description: 'Logo'},

@@ -8,14 +8,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="corner.html">More</a>
-    <a href="project.html">Works</a>
-    <a href="events.html">Events</a>
-    <a href="contact.html">Contact</a>
-</nav>
+<div id="nav-placeholder"></div>
+
+  <script>
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      });
+  </script>
   
   <main>
 
@@ -31,10 +32,10 @@
   <button class="toggle-btn" onclick="toggleDetails(this)">[+] Expand Details</button>
 
   <ul class="hidden">
-    <li>Phone: +91 xxxxxxxxxx</li>
+<!--    <li>Phone: +91 xxxxxxxxxx</li>-->
     <li>Email: <a href="mailto:pritishkarmakar17@gmail.com" >pritishkarmakar17@gmail.com</a></li>
     <li>GitHub: <a href="https://github.com/pritishkarmakar17" target="_blank">pritishkarmakar17</a></li>
-    <li>LinkedIn: <a href="https://www.linkedin.com/in/pritish-karmakar-835957226" target="_blank">Pritish Karmakar</a></li>
+    <li>LinkedIn: <a href="https://www.linkedin.com/in/pritish-karmakar-835957226" target="_blank">Pritish Karmakar</a><em>(Not an active user)</em></li>
     <li>My illustration portfolio: <a href="portfolio.html" target="_blank">click here</a></li>
 
   </ul>
