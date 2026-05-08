@@ -62,7 +62,7 @@
 body {
   font-family: "Roboto Mono", monospace;
   background: #444444;
-  color: #00ff66;
+  color: #afd6c1;
   transition: background 0.3s, color 0.3s;
   /*text-align: justify;*/
   max-width: 768px;
@@ -200,7 +200,7 @@ ul {
 }
 
 .card {
-  background: #1a1a1a;
+  background: #292929;
   padding: 1em;
   border-left: 2px solid #00ff66;
   border-top-right-radius: 1.5em;
@@ -210,7 +210,7 @@ ul {
 }
 
 .card2 {
-  background: #1a1a1a;
+  background: #393737;
   padding: 1em;
   border: 2px dashed #659779;
   border-radius: 1em;
@@ -220,7 +220,7 @@ ul {
 }
 
 strong {
-  color: #c4ffdc;
+  color: #0cff75;
 }
 
 .ascii {

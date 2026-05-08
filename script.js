@@ -476,7 +476,7 @@ const quoteText = document.getElementById("quoteText");
 const quoteSource = document.getElementById("quoteSource");
 
 const TOTAL_TYPING_TIME = 2000;
-const HOLD_TIME = 3000;
+const HOLD_TIME = 4000;
 
 function typeWriter(text, element, speed, callback) {
   element.textContent = "";
@@ -499,7 +499,7 @@ function showQuoteAtIndex(index) {
   const quote = quotes[index % quotes.length];
   // Dynamically calculate speed so total time = TOTAL_TYPING_TIME
   //const speed = Math.max(10, TOTAL_TYPING_TIME / quote.text.length);
-  const speed = 50;
+  const speed = 20;
   quoteSource.innerHTML = `— <em>${quote.source}</em>`;
 
   typeWriter(quote.text, quoteText, speed, () => {
