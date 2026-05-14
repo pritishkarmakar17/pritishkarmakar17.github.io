@@ -18,7 +18,7 @@
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #00ff66;
+  border: 6px solid #939393;
   border-top-color: #232323;
   border-bottom-color: #232323;
   border-radius: 50%;
@@ -53,16 +53,16 @@
 ----------------*/
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
-    transition-delay: 0 !important;
+    transition-delay: 0s !important;
   }
 }
 
 
 
 body {
-  font-family: "Roboto Mono", monospace;
-  background: #444444;
-  color: #afd6c1;
+  font-family: "Source Serif 4", serif;
+  background: #4e4e4e;
+  color: #9f9f9f;
   transition: background 0.3s, color 0.3s;
   /*text-align: justify;*/
   max-width: 768px;
@@ -103,7 +103,7 @@ nav {
   margin: auto;
   background: #1e1e1ecb;
   padding: 0.8em 10%;
-  border-bottom: 1px solid #00ff66a3;  
+  border-bottom: 0px solid #8f8f8f;
   top: 0;
   left: 0;
   right: 0;
@@ -116,41 +116,41 @@ nav {
 nav a {
   margin-right: 1em;
   text-decoration: none;
-  color: #00ffcc;
+  color: #d3d3d3;
   text-align: center;
 }
 nav a:hover {
-  color: #00ff66;
+  color: #ffffff;
   text-decoration: none;
 }
 
 nav a.active-link {
   color: #000000;
-  background: #00ff66;
+  background: #ffffff;
   padding: 0.2em 0.5em;
   border-radius: 5px;
   font-weight: bold;
-  text-shadow: 0 0 5px #00ffcc7a;
+  text-shadow: 0 0 5px #ffffff;
 }
 
 
 
 a {
-  color: #00ffff; 
+  color: #efefef;
   text-decoration: none;
 }
 
 a:hover {
-  color: #00ff66; 
-  text-shadow: 0 0 5px #00ff66, 0 0 10px #00ff66;
+  color: #ffffff;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff;
   
 }
 
 
-a:focus {
-  outline: 1.5px dashed #00ff66;
-  outline-offset: 0.1px;
-}
+/*a:focus {*/
+/*  outline: 1.5px dashed #00ff66;*/
+/*  outline-offset: 0.1px;*/
+/*}*/
 
 
 p {
@@ -159,27 +159,36 @@ p {
 
 
 h1 {
-  font-family: 'Courier New', Courier, Consolas Bold, monospace;
+  font-family: "Cascadia Mono", monospace;
   font-weight: bold;
 }
 
 h2 {
-  font-family: 'Courier New', Courier, Consolas Bold, monospace;
+  font-family: "Cascadia Mono", monospace;
   font-weight: bold;
-  color: #00ffff;
+  color: #dcdcdc;
   padding: 0.2em 0.2em;
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
+h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  /*color: #8affb6;*/
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+  letter-spacing: 0.03em;
+  line-height: 1.3;
+  /*border-left: 3px solid #00ff66;*/
+  padding-left: 0.6em;
+}
 
 h4 {
-  border: 1px dashed #00ff66;
+  /*border: 1px dashed #81ecc3;*/
   border-radius: 1em;
-  color: #00ff66;
-  padding: 0.2em 0.2em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  color: #81ecc3;
+  padding: 0.2em 0.5em;
   margin-top: 0;
   margin-bottom: 5pt;
   display: inline-block;
@@ -202,17 +211,17 @@ ul {
 .card {
   background: #292929;
   padding: 1em;
-  border-left: 2px solid #00ff66;
+  border-left: 2px solid #81ecc3;
   border-top-right-radius: 1.5em;
   border-bottom-right-radius: 1.5em;
-  box-shadow: 0 0 10px rgba(0, 255, 102, 0.2);
+  /*box-shadow: 0 0 10px rgba(0, 255, 102, 0.2);*/
   margin-bottom: 2em;
 }
 
 .card2 {
   background: #393737;
   padding: 1em;
-  border: 2px dashed #659779;
+  /*border: 2px dashed #659779;*/
   border-radius: 1em;
   margin-bottom: 2em;
   display: block; /* Ensure it behaves as a block element */
@@ -220,11 +229,11 @@ ul {
 }
 
 strong {
-  color: #0cff75;
+  color: #81ecc3;
 }
 
 .ascii {
-  font-family: monospace, "Courier New", Courier;
+  font-family: "Cascadia Mono", monospace;
   color: #ffffff;
   font-size: 14px;
   line-height: 1.2;
@@ -276,7 +285,7 @@ toggle show + hide details
   border: 1px dashed #659779;
   color: #659779;
   padding: 0.3em 0.8em;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Cascadia Mono", monospace;
   /* margin-top: 10px; */
   cursor: pointer;
   transition: 0.3s ease;
@@ -301,7 +310,7 @@ Cursor Effect
   display: inline-block;
   width: 10px;
   height: 1em; /* ensures vertical space */
-  background-color: #00ff66;
+  background-color: #d3d3d3;
   animation: blink 1s step-start infinite;
   vertical-align: bottom;
 }
@@ -332,15 +341,15 @@ Typing Animation (Terminal Style)
 .typewriter {
   padding-bottom: 0.8em;
   display: block;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Cascadia Mono", monospace;
   white-space: pre-wrap;      /* allows wrapping and \n support */
   word-break: break-word;    /* breaks long words to avoid overflow */
-  border-right: 0px solid #00ff66;
+  border-right: 0px solid #81ecc3;
   animation: blink-caret 0.75s step-end infinite;
   max-width: 100%;
   line-height: 1.5;
   font-size: 1em;
-  color: #00ff66;
+  color: #81ecc3;
 }
 
 
@@ -368,7 +377,7 @@ Webkit browsers
   background: #1e1e1e;
 }
 ::-webkit-scrollbar-thumb {
-  background: #00ff66;
+  background: #81ecc3;
   border-radius: 3px;
 }
 
@@ -380,7 +389,7 @@ image box
 .image-box {
   width: 170px;      
   height: 170px;      
-  border: 2px solid #00ff66; 
+  /*border: 2px solid #81ecc3; */
   border-radius: 50%; 
   overflow: hidden;   
   margin: 2em;   
@@ -439,7 +448,7 @@ Photo Gallery
   height: 150px; /* Set the height of each image */
   margin-right: 10px; /* Adjust the spacing between images */
   border-radius: 0px;
-  border: 2px solid #00ff66;
+  border: 0px solid #81ecc3;
   align-items: center;
   display: inline-flex; /* inline makes width match content */
 }
@@ -461,14 +470,14 @@ Photo Gallery
 }
 
 .photo-gallery::-webkit-scrollbar-thumb {
-  background: #00ff6692; /* Scrollbar thumb color */
+  background: #4e4e4e; /* Scrollbar thumb color */
   border-radius: 4px;
 }
 
 /* Optional: For Firefox */
 .photo-gallery {
   scrollbar-width: thin;
-  scrollbar-color: #00ff6692 #1e1e1e;
+  scrollbar-color: #4e4e4e #1e1e1e;
 }
 
 figure {
@@ -476,9 +485,9 @@ figure {
   flex-direction: column;
   margin: 1em;
   text-align: center;
-  color: #00ff66;
+  color: #81ecc3;
   font-size: 0.8em;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Cascadia Mono", monospace;
   align-items: center;
   width: fit-content;
 }
@@ -487,7 +496,7 @@ figure img {
   display: block;
   height: 150px;
   width: auto; 
-  border: 2px solid #00ff66;
+  border: 2px solid #81ecc3;
   border-radius: 0px;
   margin-bottom: 5px;
 }
@@ -496,10 +505,7 @@ figcaption {
   font-size: 1em;
   display: block;
   text-align: center;
-  margin-top: -5px;
-  margin-left: 2px;
-  margin-right: 12px;
-  margin-bottom: 10px;
+  margin: -5px 12px 10px 2px;
   line-height: 1.2;
   white-space: normal;
   overflow-wrap: break-word;
@@ -522,10 +528,10 @@ figcaption.visible {
 
 
 #quoteBox {
-  color: #00ff66;
+  color: #00ffaa;
   padding: 0.7em;
   margin: 1em 0;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Cascadia Mono", monospace;
   min-height: 3em; /* reserve height to prevent jump */
   
 }
@@ -538,7 +544,7 @@ figcaption.visible {
 
 #quoteSource {
   font-size: 0.8em;
-  color: #00ffaa;
+  color: #a5a4a4;
 }
 
 
@@ -555,9 +561,9 @@ Back to Top Button Styling
     
     /* Terminal Visuals */
     background-color: #000000aa;
-    color:#00ff66;
-    border: 2px solid #00ff408f;
-    font-family: 'Courier New', Courier, monospace;
+    color:#00ffaa;
+    border: 2px solid #61917f;
+    font-family: "Cascadia Mono", monospace;
     font-size: 11px;
     font-weight: bold;
     padding: 8px 8px;
@@ -569,9 +575,9 @@ Back to Top Button Styling
 }
 
 #terminalTopBtn:hover {
-    background-color: #00FF41;
+    background-color: #00ffaa;
     color: #000000;
-    box-shadow: 4px 4px 0px #003b0f;
+    box-shadow: 2px 2px 0px #61917f;
     transform: translate(2px, 2px);
 }
 
@@ -704,7 +710,6 @@ Back to Top Button Styling
   #quoteBox {
     font-size: 0.8em; 
     font-style: italic;
-    color: #00ff66;
     padding: 0.7em;
     margin: 1em 0;
   }
