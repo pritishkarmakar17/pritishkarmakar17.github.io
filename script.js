@@ -30,24 +30,45 @@ function typeWriterEffect(el, speed = 50) {
 
 
 // Highlight the active link in navbar
+function highlightActiveNavLink() {
+  const navLinks = document.querySelectorAll("nav a");
+  const currentPath = window.location.pathname.split("/").pop() || "index.html";
+
+  navLinks.forEach(link => {
+    const linkPath = link.getAttribute("href");
+    link.classList.toggle("active-link", linkPath === currentPath);
+  });
+}
+
 document.addEventListener("DOMContentLoaded", function () {
-    const navLinks = document.querySelectorAll('nav a');
-    const currentPath = window.location.pathname.split("/").pop();
-  
-    navLinks.forEach(link => {
-      const linkPath = link.getAttribute("href");
-      if (linkPath === currentPath) {
-        link.classList.add("active-link");
-      }
+  // Lazy loading images
+  const lazyloadImages = document.querySelectorAll(".lazy-load");
+  lazyloadImages.forEach(function (img) {
+    img.setAttribute("src", img.getAttribute("data-src"));
+  });
+
+  const navPlaceholder = document.getElementById("nav-placeholder");
+
+  // nav.html is fetched asynchronously on every page, so watch for it to appear
+  if (navPlaceholder) {
+    const observer = new MutationObserver(() => {
+      highlightActiveNavLink();
     });
 
-  
-// Lazy loading images
-const lazyloadImages = document.querySelectorAll(".lazy-load");
-    lazyloadImages.forEach(function (img) {
-      img.setAttribute("src", img.getAttribute("data-src"));
-    });
-  });
+    observer.observe(navPlaceholder, { childList: true, subtree: true });
+
+    // Try immediately too, in case nav is already present
+    highlightActiveNavLink();
+
+    // Stop observing once links are available and highlighted
+    window.addEventListener("load", () => {
+      highlightActiveNavLink();
+      observer.disconnect();
+    }, { once: true });
+  } else {
+    highlightActiveNavLink();
+  }
+});
 
 //Lazy reveal
   document.querySelectorAll("figure").forEach(figure => {

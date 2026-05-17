@@ -125,12 +125,15 @@ nav a:hover {
 }
 
 nav a.active-link {
-  color: #000000;
-  background: #ffffff;
-  padding: 0.2em 0.5em;
-  border-radius: 5px;
-  font-weight: bold;
-  text-shadow: 0 0 5px #ffffff;
+  display: inline-block;
+  color: #1e201e;
+  background: #ecdfcc;
+  border: 1px solid #ecdfcc;
+  padding: 0.25em 0.7em;
+  border-radius: 999px;
+  font-weight: 700;
+  text-shadow: none;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -197,7 +200,7 @@ h4 {
 
 ul li::before {
   content: "▌"; /* ⮞ or ▶, ✓, →, etc. */
-  color: #659779;
+  color: #6da692;
   font-weight: bold;
   margin-right: 10px;
 }
@@ -247,7 +250,7 @@ strong {
 }
 
 .dashed-line {
-  border-top: 1px dashed #00ff66;
+  border-top: 1px dashed #81ecc3;
   margin: 2em 0;
   opacity: 0.3;
 }
@@ -282,8 +285,8 @@ toggle show + hide details
 
 .toggle-btn {  
   background: none;
-  border: 1px dashed #659779;
-  color: #659779;
+  border: 1px dashed #6da692;
+  color: #6da692;
   padding: 0.3em 0.8em;
   font-family: "Cascadia Mono", monospace;
   /* margin-top: 10px; */
@@ -292,7 +295,7 @@ toggle show + hide details
 }
 
 .toggle-btn:hover {
-  background: #659779;
+  background: #81ecc3;
   color: #1e1e1e;
 }
 
@@ -638,7 +641,7 @@ Back to Top Button Styling
     font-size: 1.2em;
   }
 
-  .card, .card2
+  .card, .card2,
   section {
     padding: 0.8em;
   }
