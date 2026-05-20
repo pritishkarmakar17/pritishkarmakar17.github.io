@@ -115,10 +115,10 @@ function toggleDetails(button) {
   
     if (isHidden) {
       details.classList.remove("hidden");
-      button.textContent = "[-] Hide Details";
+      button.textContent = "[-] Hide";
     } else {
       details.classList.add("hidden");
-      button.textContent = "[+] Expand Details";
+      button.textContent = "[+] Expand";
     }
   }
   

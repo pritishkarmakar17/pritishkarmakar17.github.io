@@ -61,7 +61,9 @@
 
 body {
   font-family: "Source Serif 4", serif;
-  background: #4e4e4e;
+  font-weight: 300;
+  background-image: linear-gradient(to bottom, #3e3e3e, #787878);
+  background-attachment: fixed;
   color: #9f9f9f;
   transition: background 0.3s, color 0.3s;
   /*text-align: justify;*/
@@ -71,7 +73,7 @@ body {
 }
 
 main {
-  width: 95%;
+  width: 99%;
   padding-top: 1em; 
   padding-bottom: 5em;
 }
@@ -136,6 +138,62 @@ nav a.active-link {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
+/* -----------------
+  Welcome Section
+  -------------- */
+
+.welcome-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  margin: 40px auto;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+.welcome-text {
+  flex: 1;
+}
+
+.welcome-badge {
+  font-family: "Cascadia Mono", monospace;
+  font-size: 0.85em;
+  color: #81ecc3;
+  letter-spacing: 3px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.welcome-text h1 {
+  font-size: 2.8em;
+  margin: 0 0 10px 0;
+  line-height: 1.1;
+  color: #ffffff;
+}
+
+.welcome-subtitle {
+  font-family: "Cascadia Mono", monospace;
+  font-size: 1em;
+  color: #939393;
+  margin: 0;
+}
+
+/* Image Wrapper */
+.img-single {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.img-single img {
+  width: 100%;
+  max-width: 320px; /* Controls the maximum size of your scattering asset */
+  height: auto;
+  border-radius: 0px;
+  /* Optional sleek glow effect matching your border theme: */
+  filter: drop-shadow(0 0 8px rgba(129, 236, 195, 0.15));
+}
 
 
 a {
@@ -164,27 +222,30 @@ p {
 h1 {
   font-family: "Cascadia Mono", monospace;
   font-weight: bold;
+  color: #dcdcdc;
 }
 
 h2 {
   font-family: "Cascadia Mono", monospace;
+  background-image: linear-gradient(to right, rgb(0 0 0 / 0.75), transparent 90%);
   font-weight: bold;
-  color: #dcdcdc;
   padding: 0.2em 0.2em;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 15pt;
+  margin-bottom: 5pt;
 }
 
 h3 {
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 500;
+  color: #d5d5d5;
+  font-style: italic;
   /*color: #8affb6;*/
-  margin-top: 1.2em;
+  margin-top: 0.5em;
   margin-bottom: 0.5em;
   letter-spacing: 0.03em;
   line-height: 1.3;
   /*border-left: 3px solid #00ff66;*/
-  padding-left: 0.6em;
+  /*padding-left: 0.6em;*/
 }
 
 h4 {
@@ -192,8 +253,8 @@ h4 {
   border-radius: 1em;
   color: #81ecc3;
   padding: 0.2em 0.5em;
-  margin-top: 0;
-  margin-bottom: 5pt;
+  margin-top: 0pt;
+  margin-bottom: 0pt;
   display: inline-block;
 }
 
@@ -218,7 +279,8 @@ ul {
   border-top-right-radius: 1.5em;
   border-bottom-right-radius: 1.5em;
   /*box-shadow: 0 0 10px rgba(0, 255, 102, 0.2);*/
-  margin-bottom: 2em;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
 
 .card2 {
@@ -285,11 +347,11 @@ toggle show + hide details
 
 .toggle-btn {  
   background: none;
-  border: 1px dashed #6da692;
-  color: #6da692;
+  border: 1px dashed rgb(109 166 146 / 0.5);
+  color: rgb(109 166 146 / 0.7);
   padding: 0.3em 0.8em;
   font-family: "Cascadia Mono", monospace;
-  /* margin-top: 10px; */
+  margin-top: 10px;
   cursor: pointer;
   transition: 0.3s ease;
 }
@@ -343,6 +405,8 @@ Typing Animation (Terminal Style)
 ------------------*/
 .typewriter {
   padding-bottom: 0.8em;
+  margin-top: -5px;
+  margin-bottom: 0px;
   display: block;
   font-family: "Cascadia Mono", monospace;
   white-space: pre-wrap;      /* allows wrapping and \n support */
@@ -365,9 +429,6 @@ Typing Animation (Terminal Style)
   50% { border-color: transparent; }
 }
 
-.typewriter {
-  margin-top: -5px;
-}
 
 
 /*-------------------
@@ -390,26 +451,26 @@ image box
 ------------------------*/
 
 .image-box {
-  width: 170px;      
-  height: 170px;      
+  width: 170px;
+  height: 170px;
   /*border: 2px solid #81ecc3; */
-  border-radius: 50%; 
-  overflow: hidden;   
-  margin: 2em;   
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 2em;
 }
 
 .image-box img {
-  width: 100%;  
-  height: 100%;  
-  object-fit: cover;  
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   object-position: center;
-  
+
 }
 
 
 .img-single {
-  background-color: transparent; 
-  text-align: center; 
+  background-color: transparent;
+  text-align: center;
   overflow-x: auto;         /* Allows sideways scroll if too wide */
   display: block;
   margin: 1em auto;
@@ -418,10 +479,10 @@ image box
 }
 
 .img-single img{
-  width: 70%;  
-  height: auto;        
-  display: inline-block; 
-  object-fit: contain; 
+  width: 70%;
+  height: auto;
+  display: inline-block;
+  object-fit: contain;
   object-position: center;
 }
 
@@ -431,89 +492,77 @@ image box
 Photo Gallery
 ------------------------*/
 
+/* Photo Gallery Container */
 
 .photo-gallery {
+  height: auto;
   width: auto;
-  overflow-x: auto;
-  white-space: nowrap;
-  border-radius: 0px;
   margin: 10px;
-  scroll-behavior: smooth;
-  padding-bottom: 5px; /* spacing between photos and scrollbar */
-}
-
-.scrolling-wrapper {
-  display: flex;
-  gap: 10px;
-}
-
-.scrolling-wrapper img {
-  height: 150px; /* Set the height of each image */
-  margin-right: 10px; /* Adjust the spacing between images */
-  border-radius: 0px;
-  border: 0px solid #81ecc3;
-  align-items: center;
-  display: inline-flex; /* inline makes width match content */
-}
-.photo-gallery {
+  padding-bottom: 4px; /* Spacing between photos and scrollbar */
   overflow-x: auto;
   white-space: nowrap;
-  scrollbar-width: thin;
-  scrollbar-color: transparent transparent; 
+  scroll-behavior: smooth;
+
+  /* Modern Standard Scrollbar (Firefox) */
+  scrollbar-width: auto;
+  scrollbar-color: #4e4e4e #1e1e1e;
 }
 
-/* WebKit (Chrome, Edge, Safari) scrollbar styles */
+/* WebKit Scrollbar (Chrome, Edge, Safari) */
 .photo-gallery::-webkit-scrollbar {
-  margin-top: 2px;
-  height: 20px; /* Horizontal scrollbar height */
+  height: 6px; /* Adjusted to look sleek, 20px is usually way too chunky */
 }
 
 .photo-gallery::-webkit-scrollbar-track {
-  background: #1e1e1e; /* Track background */
+  background: #1e1e1e;
 }
 
 .photo-gallery::-webkit-scrollbar-thumb {
-  background: #4e4e4e; /* Scrollbar thumb color */
+  background: #4e4e4e;
   border-radius: 4px;
 }
 
-/* Optional: For Firefox */
-.photo-gallery {
-  scrollbar-width: thin;
-  scrollbar-color: #4e4e4e #1e1e1e;
+/* Scrolling Wrapper & Content */
+
+.scrolling-wrapper {
+  display: flex;
+  gap: 3px;
 }
 
 figure {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: fit-content;
   margin: 1em;
   text-align: center;
   color: #81ecc3;
   font-size: 0.8em;
   font-family: "Cascadia Mono", monospace;
-  align-items: center;
-  width: fit-content;
 }
 
 figure img {
   display: block;
-  height: 150px;
-  width: auto; 
-  border: 2px solid #81ecc3;
-  border-radius: 0px;
+  height: 160px;
+  width: auto;
+  flex-shrink: 0;
+  border: 0px solid #81ecc3;
+  border-radius: 5px;
   margin-bottom: 5px;
 }
 
 figcaption {
-  font-size: 1em;
   display: block;
-  text-align: center;
-  margin: -5px 12px 10px 2px;
+  width: 95%;
+  padding: 2px;
+  margin: 5px 5px 5px 5px;
+  font-size: 1em;
   line-height: 1.2;
+  text-align: center;
   white-space: normal;
   overflow-wrap: break-word;
-  width: 100%;
-  padding: 2px 2px;
+  max-width: 150px;
+
   /* Lazy load fade-in */
   opacity: 0;
   transition: opacity 0.5s ease;
@@ -522,7 +571,6 @@ figcaption {
 figcaption.visible {
   opacity: 1;
 }
-
 
 
 /* ------------------
@@ -621,7 +669,11 @@ Back to Top Button Styling
     margin-right: 0.5em;
   }
 
-  
+  .welcome-container {
+    flex-direction: column-reverse; /* Puts text on top, image below on phone screens */
+    text-align: center;
+    gap: 20px;
+  }
 
   .photo-gallery {
     padding-bottom: 8px;
@@ -630,12 +682,6 @@ Back to Top Button Styling
   .scrolling-wrapper {
     gap: 6px;
   }
-
-
-  figure img {
-    height: 120px;
-  }
-
 
   .typing-effect {
     font-size: 1.2em;
@@ -649,7 +695,10 @@ Back to Top Button Styling
 
 
 @media screen and (max-width: 480px) {
-  
+  body {
+    padding: 0.5em;
+  }
+
   nav {
     font-size: smaller;
     position: fixed;
@@ -720,13 +769,18 @@ Back to Top Button Styling
     font-size: 12px;
   }
 
+  .card, .card2,
+  section {
+    padding: 0.6em;
+  }
+
 }
 
 /*Scroll bar*/
 /* Modern Standard */
 * {
-  scrollbar-width: thin;
-  scrollbar-color: #4a4a4a #1a1a1a;
+  scrollbar-width: auto;
+  scrollbar-color: #979797 #1a1a1a;
 }
 
 /* WebKit (Chrome/Safari/Edge) */

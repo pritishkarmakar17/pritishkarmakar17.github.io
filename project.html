@@ -18,13 +18,20 @@
         document.getElementById('nav-placeholder').innerHTML = data;
       });
   </script>
+  <script>
+    fetch('nav.html')
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById('nav-placeholder').innerHTML = data;
+      });
+  </script>
 
     <main>
     <h1>My Academic Works <span class="cursor"></span></h1>
     <pre class="typewriter" data-text=">> Lists of Projects & Internships I've completed."></pre>
 
 
-     <section class="card">
+     <section class="card" style="box-shadow: 0 0 10px rgb(138 255 182 / 0.5);">
     <article class="event-entry">
         <h2>MS Thesis</h2>
         <h4>May 2025 - May 2026</h4>
