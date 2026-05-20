@@ -30,12 +30,24 @@ function typeWriterEffect(el, speed = 50) {
 
 
 // Highlight the active link in navbar
-function highlightActiveNavLink() {
+function getCurrentPageName() {
+  const path = window.location.pathname.replace(/\/+$/, "");
+  return path.split("/").pop() || "index.html";
+}
+
+function highlightActiveNavLink(retryCount = 0) {
   const navLinks = document.querySelectorAll("nav a");
-  const currentPath = window.location.pathname.split("/").pop() || "index.html";
+  const currentPath = getCurrentPageName();
+
+  if (!navLinks.length) {
+    if (retryCount < 20) {
+      setTimeout(() => highlightActiveNavLink(retryCount + 1), 50);
+    }
+    return;
+  }
 
   navLinks.forEach(link => {
-    const linkPath = link.getAttribute("href");
+    const linkPath = (link.getAttribute("href") || "").split("#")[0];
     link.classList.toggle("active-link", linkPath === currentPath);
   });
 }
