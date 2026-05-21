@@ -4,7 +4,7 @@
 // typewriter effect
 // This code grabs the data-text from any element and animates it:
 // html: <pre class="typewriter" data-text=">> Booting kernel..."></pre>
-function typeWriterEffect(el, speed = 50) {
+function typeWriterEffect(el, speed = 10) {
     const text = el.getAttribute("data-text");
     let i = 0;
 
@@ -508,7 +508,7 @@ const quoteBox = document.getElementById("quoteBox");
 const quoteText = document.getElementById("quoteText");
 const quoteSource = document.getElementById("quoteSource");
 
-const TOTAL_TYPING_TIME = 2000;
+const TOTAL_TYPING_TIME = 1000;
 const HOLD_TIME = 4000;
 
 function typeWriter(text, element, speed, callback) {

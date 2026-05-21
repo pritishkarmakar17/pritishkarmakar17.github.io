@@ -62,7 +62,7 @@
 body {
   font-family: "Source Serif 4", serif;
   font-weight: 300;
-  background-image: linear-gradient(to bottom, #3e3e3e, #787878);
+  background-image: linear-gradient(to bottom, #353535, #4c4c4c);
   background-attachment: fixed;
   color: #9f9f9f;
   transition: background 0.3s, color 0.3s;
