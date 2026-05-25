@@ -62,7 +62,7 @@
 body {
   font-family: "Source Serif 4", serif;
   font-weight: 300;
-  background-image: linear-gradient(to bottom, #353535, #4c4c4c);
+  background-image: linear-gradient(to bottom, #303030, #606060);
   background-attachment: fixed;
   color: #9f9f9f;
   transition: background 0.3s, color 0.3s;
@@ -215,7 +215,7 @@ a:hover {
 
 
 p {
-  font-size: medium;
+  font-size: large;
 }
 
 
@@ -260,16 +260,25 @@ h4 {
 
 
 ul li::before {
-  content: "▌"; /* ⮞ or ▶, ✓, →, etc. */
+  content: "▌"; /* ⮞ or ▌, ▶, ✓, →, etc. */
   color: #6da692;
   font-weight: bold;
   margin-right: 10px;
 }
 ul {
-  font-size: medium;
+  font-size: large;
   margin-left: 5px;
   list-style: none;
   padding-left: 0;
+  font-weight: 100;
+}
+
+ul li {
+  padding: 0.2em;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .card {
@@ -342,10 +351,80 @@ pending links
 
 
 /*---------------
+toggled heading
+------------------*/
+
+details {
+  margin-top: 0.5em;
+}
+
+summary {
+  font-size: larger;
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  padding: 0.6em 1em 0.6em 0.3em;
+  margin: 1em .2em;
+  /*border: 1px solid rgb(129 236 195 / 0.25);*/
+  border-top-right-radius: .75em;
+  border-bottom-right-radius: .75em;
+  background: linear-gradient(90deg, transparent, rgb(129 236 195 / 0.06));
+  color: #dcdcdc;
+  font-family: "Cascadia Mono", monospace;
+  font-weight: 700;
+  transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+summary:hover {
+  background: linear-gradient(90deg, transparent, rgb(129 236 195 / 0.2));
+  /*border-color: rgb(129 236 195 / 0.55);*/
+  /*box-shadow: 0 0 5px rgb(118 198 149 / 0.5);*/
+  transform: translateY(-1px);
+}
+
+/*summary:focus-visible {*/
+/*  outline: 2px solid #81ecc3;*/
+/*  outline-offset: 3px;*/
+/*}*/
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary::after {
+  content: "+";
+  color: #81ecc3;
+  font-size: 1.15em;
+  line-height: 1;
+  transition: transform 0.25s ease, color 0.25s ease;
+}
+
+
+details[open] > summary {
+  border-color: rgb(129 236 195 / 0.5);
+  background: linear-gradient(90deg, transparent, rgb(129 236 195 / 0.2));
+  border-top-right-radius: .75em;
+  border-bottom-right-radius: 0em;
+}
+
+details[open] > summary::after {
+  content: "−";
+  transform: rotate(180deg);
+}
+
+details > div {
+  padding: 1em 0.2em 0.2em;
+}
+
+
+/*---------------
 toggle show + hide details
 ------------------*/
 
-.toggle-btn {  
+.toggle-btn {
   background: none;
   border: 1px dashed rgb(109 166 146 / 0.5);
   color: rgb(109 166 146 / 0.7);
@@ -359,6 +438,7 @@ toggle show + hide details
 .toggle-btn:hover {
   background: #81ecc3;
   color: #1e1e1e;
+  box-shadow: 4px 4px 0px rgb(129 236 195 / 0.5);
 }
 
 .hidden {
@@ -404,7 +484,7 @@ html: <span class="blinker">▶</span>
 Typing Animation (Terminal Style)
 ------------------*/
 .typewriter {
-  padding-bottom: 0.8em;
+  /*padding-bottom: 0.8em;*/
   margin-top: -5px;
   margin-bottom: 0px;
   display: block;
@@ -612,8 +692,8 @@ Back to Top Button Styling
     
     /* Terminal Visuals */
     background-color: #000000aa;
-    color:#00ffaa;
-    border: 2px solid #61917f;
+    color:#61917f;
+    border: 2px solid #2a4943;
     font-family: "Cascadia Mono", monospace;
     font-size: 11px;
     font-weight: bold;
@@ -627,8 +707,9 @@ Back to Top Button Styling
 
 #terminalTopBtn:hover {
     background-color: #00ffaa;
+    border: 2px solid #2a4943;
     color: #000000;
-    box-shadow: 2px 2px 0px #61917f;
+    box-shadow: 2px 2px 1px #2a4943;
     transform: translate(2px, 2px);
 }
 
