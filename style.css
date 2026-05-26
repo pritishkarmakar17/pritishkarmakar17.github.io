@@ -59,18 +59,50 @@
 
 
 
+/*==========================
+ Declare variables globally
+==========================*/
+
+:root {
+  --font_welcome: "JetBrains Mono", monospace;
+  --font1: "CMU Serif", "Georgia";
+  --font2: "Fira Code", monospace;
+  --font_quote: "IBM Plex Mono", monospace;
+}
+
+
 body {
-  font-family: "Source Serif 4", serif;
+  /*font-family: "Source Serif 4", serif;*/
+  font-family: var(--font1);
   font-weight: 300;
-  background-image: linear-gradient(to bottom, #303030, #606060);
+  color: #a8a8a8;
+  line-height: 1.4;
+  word-spacing: 0.1em;
+
+  /*background-image:*/
+  /*  linear-gradient(to left, #76c695, #aff3c7),*/
+  /*  linear-gradient(to bottom, #303030, #606060);*/
+
+  background-image:
+    radial-gradient(circle at 50% 50%, rgba(118, 198, 149, 0.15) 0%, rgba(175, 243, 199, 0.03) 40%, transparent 70%),
+    linear-gradient(to bottom, #323232, #434343);
+
+  /*background-blend-mode: overlay; !*overlay, luminosity, soft-light, screen, multiply *!*/
+
+  background-repeat: no-repeat;
+  background-position: center;
+  /*background-size: 120%;*/
   background-attachment: fixed;
-  color: #9f9f9f;
+  min-height: 100vh;
+
   transition: background 0.3s, color 0.3s;
   /*text-align: justify;*/
   max-width: 768px;
   margin: auto;
   padding: 3em;
+  box-sizing: border-box;
 }
+
 
 main {
   width: 99%;
@@ -133,7 +165,7 @@ nav a.active-link {
   border: 1px solid #ecdfcc;
   padding: 0.25em 0.7em;
   border-radius: 999px;
-  font-weight: 700;
+  font-weight: 500;
   text-shadow: none;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
@@ -157,7 +189,7 @@ nav a.active-link {
 }
 
 .welcome-badge {
-  font-family: "Cascadia Mono", monospace;
+  font-family: var(--font_welcome);
   font-size: 0.85em;
   color: #81ecc3;
   letter-spacing: 3px;
@@ -173,7 +205,7 @@ nav a.active-link {
 }
 
 .welcome-subtitle {
-  font-family: "Cascadia Mono", monospace;
+  font-family: var(--font_welcome);
   font-size: 1em;
   color: #939393;
   margin: 0;
@@ -216,17 +248,18 @@ a:hover {
 
 p {
   font-size: large;
+  padding: 0 1em
 }
 
 
 h1 {
-  font-family: "Cascadia Mono", monospace;
+  font-family: var(--font2);
   font-weight: bold;
   color: #dcdcdc;
 }
 
 h2 {
-  font-family: "Cascadia Mono", monospace;
+  font-family: var(--font2);
   background-image: linear-gradient(to right, rgb(0 0 0 / 0.75), transparent 90%);
   font-weight: bold;
   padding: 0.2em 0.2em;
@@ -308,11 +341,14 @@ strong {
 
 .ascii {
   font-family: "Cascadia Mono", monospace;
+  font-weight: bold;
+  word-spacing: 0;
   color: #ffffff;
-  font-size: 14px;
-  line-height: 1.2;
+  font-size: 13px;
+  line-height: 1;
   white-space: pre;         /* Important: preserves spacing + prevents wrapping */
-  overflow-x: auto;         /* Allows sideways scroll if too wide */
+  overflow-x: auto; /* Allows sideways scroll if too wide */
+  overflow-y: hidden; /* Hides vertical scrollbar */
   display: block;
   margin: 1em auto;
   text-align: left;
@@ -488,7 +524,7 @@ Typing Animation (Terminal Style)
   margin-top: -5px;
   margin-bottom: 0px;
   display: block;
-  font-family: "Cascadia Mono", monospace;
+  font-family: var(--font2);
   white-space: pre-wrap;      /* allows wrapping and \n support */
   word-break: break-word;    /* breaks long words to avoid overflow */
   border-right: 0px solid #81ecc3;
@@ -616,9 +652,9 @@ figure {
   width: fit-content;
   margin: 1em;
   text-align: center;
-  color: #81ecc3;
+  color: #76c695;
   font-size: 0.8em;
-  font-family: "Cascadia Mono", monospace;
+  font-family: var(--font1);
 }
 
 figure img {
@@ -662,7 +698,7 @@ figcaption.visible {
   color: #00ffaa;
   padding: 0.7em;
   margin: 1em 0;
-  font-family: "Cascadia Mono", monospace;
+  font-family: var(--font_quote);
   min-height: 3em; /* reserve height to prevent jump */
   
 }
@@ -694,7 +730,7 @@ Back to Top Button Styling
     background-color: #000000aa;
     color:#61917f;
     border: 2px solid #2a4943;
-    font-family: "Cascadia Mono", monospace;
+    font-family: var(--font2);
     font-size: 11px;
     font-weight: bold;
     padding: 8px 8px;
