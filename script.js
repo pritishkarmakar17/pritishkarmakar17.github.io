@@ -245,10 +245,6 @@ const quotes = [
     source: "Epictetus"
   },
   {
-    text: "Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world, stimulating progress, giving birth to evolution.",
-    source: "Albert Einstein" // Died 1955, major work pre-late 20th.
-  },
-  {
     text: "The world is my representation.",
     source: "Arthur Schopenhauer"
   },

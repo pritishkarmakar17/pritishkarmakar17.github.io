@@ -181,7 +181,7 @@ nav a.active-link {
   gap: 40px;
   margin: 40px auto;
   max-width: 900px;
-  padding: 0 20px;
+  /*padding: 0 20px;*/
 }
 
 .welcome-text {
@@ -260,7 +260,7 @@ h1 {
 
 h2 {
   font-family: var(--font2);
-  background-image: linear-gradient(to right, rgb(0 0 0 / 0.75), transparent 90%);
+  background-image: linear-gradient(to right, rgb(0 0 0 / 0.55), transparent 100%);
   font-weight: bold;
   padding: 0.2em 0.2em;
   margin-top: 15pt;
@@ -315,7 +315,8 @@ html {
 }
 
 .card {
-  background: #292929;
+  /*background: #292929;*/
+  background-image: linear-gradient(to right, #292929, #1c1c1c 100%);
   padding: 1em;
   border-left: 2px solid #81ecc3;
   border-top-right-radius: 1.5em;
@@ -326,7 +327,9 @@ html {
 }
 
 .card2 {
-  background: #393737;
+  /*background: #393737;*/
+  background-image: linear-gradient(to right, #393737, rgb(57 55 55 / 0.31), #393737);
+
   padding: 1em;
   /*border: 2px dashed #659779;*/
   border-radius: 1em;
@@ -521,7 +524,7 @@ Typing Animation (Terminal Style)
 ------------------*/
 .typewriter {
   /*padding-bottom: 0.8em;*/
-  margin-top: -5px;
+  margin-top: 10px;
   margin-bottom: 0px;
   display: block;
   font-family: var(--font2);
@@ -665,6 +668,11 @@ figure img {
   border: 0px solid #81ecc3;
   border-radius: 5px;
   margin-bottom: 5px;
+}
+
+figure img:hover {
+  /*cursor: pointer;*/
+  box-shadow: 0 0 10px rgb(138 255 182 / 0.5);
 }
 
 figcaption {
