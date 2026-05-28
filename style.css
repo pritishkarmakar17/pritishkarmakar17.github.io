@@ -378,6 +378,42 @@ Events
   margin-bottom: 5px;
 }
 
+/*----------------------------
+   Batch
+ ----------------------------*/
+.badge-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 1em;
+}
+
+.skill-badge {
+  font-family: var(--font1);
+  font-size: 0.8em;
+  padding: 4px 10px;
+  background: #252525;
+  color: #c0c0c0;
+  border-radius: 3px;
+  border: 1px solid #3a3a3a;
+  transition: all 0.2s ease;
+  cursor: default ;
+}
+
+/* Thematic Color Accents */
+.skill-badge.core { border-color: #43a5f4; color: #9bcbf2; }
+.skill-badge.ML { border-color: #e843f4; color: #e887ef;}
+.skill-badge.art { border-color: #a370f7; color: #d2b9ff; }
+.skill-badge.tool { border-color: #fbc02d; color: #fbe9a7; }
+.skill-badge.web { border-color: #4caf50; color: #a8d5a2; }
+.skill-badge.learning { border-color: #ee4c2c; color: #ff9e8a; font-style: italic; }
+
+.skill-badge:hover {
+  transform: translateY(-2px);
+  background: #1b1b1b;
+}
+
+
 /*---------------
 pending links
 ------------------*/
@@ -385,6 +421,7 @@ pending links
   opacity: 0.6;
   cursor: not-allowed;
   text-decoration: underline dotted;
+  color: #ffb9b9;
 }
 
 
@@ -586,11 +623,31 @@ image box
 
 }
 
+/*-------------------
+  Profile avatar
+-------------------*/
+
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+
+  border: 2px solid #81ecc3;
+  box-shadow: 0 0 15px rgba(129, 236, 195, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-avatar:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 22px rgba(129, 236, 195, 0.6);
+}
+
 
 .img-single {
   background-color: transparent;
   text-align: center;
-  overflow-x: auto;         /* Allows sideways scroll if too wide */
+  overflow-x: auto;
   display: block;
   margin: 1em auto;
   max-width: 100%;
@@ -925,5 +982,4 @@ Back to Top Button Styling
 ::-webkit-scrollbar-thumb:hover {
   background: #666;
 }
-
 

@@ -17,19 +17,21 @@
         document.getElementById('nav-placeholder').innerHTML = data;
       });
   </script>
-  
+
 
   <main>
   <h1>About Me <span class="cursor"></span></h1>
 
-  <div class="image-box" >
-            <img src="assets/img/profile.jpeg" alt="Me" loading="lazy">
-  </div>
-<section class="card"> 
+  <img src="assets/img/profile.jpeg"
+     alt="Me"
+     loading="lazy"
+     class="profile-avatar">
+
+<section class="card">
 <article class="event-entry">
   <p>I have completed MS in Physics at IISER Kolkata this year. My academic journey is all about curiosity and love for learning. </P>
 <!--  Right now, I am pursuing my Masters under <a href="https://www.iiserkol.ac.in/web/en/people/faculty/dps/slal" target="_blank"> Prof. Siddhartha Lal</a> with <a href="https://epqm.github.io/" target="_blank"> EPQM</a> group.-->
-  
+
     <P>I love football.</p>
 
   <ul>
@@ -41,7 +43,7 @@
   </article>
   </section>
 
-  <section class="card"> 
+  <section class="card">
   <article class="event-entry">
     <details>
           <summary>My Academic History</summary>
@@ -86,6 +88,36 @@
   </article>
   </section>
 
+
+  <section class="card">
+    <article class="event-entry">
+      <details>
+        <summary>My Technical Stack</summary>
+        <pre class="typewriter" data-text=">> Compiling my creative & technical arsenals." style="margin: 0 1em;"></pre>
+
+          <h3>Languages & Tools</h3>
+          <div class="badge-container">
+            <span class="skill-badge core">Python</span>
+            <span class="skill-badge core">NumPy</span>
+            <span class="skill-badge core">SciPy</span>
+            <span class="skill-badge ML">PyTorch</span>
+            <span class="skill-badge tool">LaTeX</span>
+            <span class="skill-badge tool">Git</span>
+            <span class="skill-badge web">HTML5</span>
+            <span class="skill-badge web">CSS3</span>
+          </div>
+
+          <h3>Creative Applications</h3>
+          <div class="badge-container">
+            <span class="skill-badge art">Krita</span>
+            <span class="skill-badge art">Inkscape</span>
+            <span class="skill-badge art">GIMP</span>
+            <span class="skill-badge learning">FreeCAD (Learning)</span>
+            <span class="skill-badge learning">Blender (Learning)</span>
+          </div>
+      </details>
+    </article>
+  </section>
 
 
   <section class="card">
@@ -137,7 +169,7 @@
 
       <div class="hidden">
         <p>
-          My taste spans across action, romance, drama, slice-of-life stories, epic fantasy.
+          My taste spans across action, romance, drama, slice-of-life stories, philosophical and epic fantasy.
         </p>
       <p>Recommended Films :</p>
           <div class="photo-gallery">
@@ -228,10 +260,10 @@
                 <figcaption>Gladiator (2000)</figcaption>
               </figure>
 
-              <figure>
-                <img src="assets/movie_cover/Kingdom of Heaven.jpg" alt="Kingdom of Heaven" loading="lazy">
-                <figcaption>Kingdom of Heaven (2005)</figcaption>
-              </figure>
+<!--              <figure>-->
+<!--                <img src="assets/movie_cover/Kingdom of Heaven.jpg" alt="Kingdom of Heaven" loading="lazy">-->
+<!--                <figcaption>Kingdom of Heaven (2005)</figcaption>-->
+<!--              </figure>-->
 
               <figure>
                 <img src="assets/movie_cover/Ford v Ferrari.jpg" alt="Ford v Ferrari" loading="lazy">
@@ -494,7 +526,7 @@
   </article>
   </section>
 
-  
+
   </main>
 
     <button id="terminalTopBtn" title="Return to Top">To Top</button>
