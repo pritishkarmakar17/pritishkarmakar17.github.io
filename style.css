@@ -391,10 +391,10 @@ Events
   font-family: var(--font1);
   font-size: 0.8em;
   padding: 10px 8px;
-  background: #252525;
+  background: rgb(23 23 23 / 0.5);
   color: #c0c0c0;
-  border-radius: 3px;
-  border: 1px solid #3a3a3a;
+  border-radius: 15px 0px 15px 0px;
+  border: 0px solid #3a3a3a;
   transition: all 0.2s ease;
   cursor: default ;
   display: inline-flex;
@@ -402,10 +402,15 @@ Events
   align-items: center;
   justify-content: center;
 
-  width: 90px;         
+  width: 90px;
+  height: 90px;
   gap: 8px;
   text-align: center;
 }
+
+.skill-badge i {
+  color: rgb(255 255 255 / 0.5);
+ }
 
 .skill-badge img {
   width: 40px;
@@ -420,7 +425,7 @@ Events
 .skill-badge.art { border-color: #a370f7; color: #d2b9ff; }
 .skill-badge.tool { border-color: #fbc02d; color: #fbe9a7; }
 .skill-badge.web { border-color: #4caf50; color: #a8d5a2; }
-.skill-badge.learning { border-color: #ee4c2c; color: #ff9e8a; font-style: italic; }
+.skill-badge.cad { border-color: #ee4c2c; color: #ff9e8a; }
 
 .skill-badge:hover {
   transform: translateY(-2px);
@@ -691,7 +696,7 @@ Photo Gallery
   height: auto;
   width: auto;
   margin: 10px;
-  padding-bottom: 4px; /* Spacing between photos and scrollbar */
+  /*padding-bottom: 4px; */
   overflow-x: auto;
   white-space: nowrap;
   scroll-behavior: smooth;
