@@ -134,9 +134,10 @@ nav {
   position: fixed;
   max-width: 90%;
   margin: auto;
-  background: #1e1e1ecb;
+  background: rgb(30 30 30 / 0.8);
   padding: 0.8em 10%;
   border-bottom: 0px solid #8f8f8f;
+  border-radius: 10em;
   top: 0;
   left: 0;
   right: 0;
@@ -144,6 +145,12 @@ nav {
   z-index: 999;
   justify-content: center; /* Centers items horizontally (along the row) */
   align-items: center;     /* Centers items vertically (top to bottom) */
+}
+
+nav:hover {
+  background-image: linear-gradient(to right, #101010, rgb(16 16 16 / 0.2), #101010 100%);
+  /*background-blend-mode: overlay;*/
+
 }
 
 nav a {
