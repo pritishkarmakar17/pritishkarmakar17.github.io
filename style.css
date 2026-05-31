@@ -92,7 +92,8 @@ body {
   background-position: center;
   /*background-size: 120%;*/
   background-attachment: fixed;
-  min-height: 100vh;
+  /*min-height: 100vh;*/
+  min-height: 100dvh;
 
   transition: background 0.3s, color 0.3s;
   /*text-align: justify;*/
@@ -310,7 +311,7 @@ ul {
   margin-left: 5px;
   list-style: none;
   padding-left: 0;
-  font-weight: 100;
+  font-weight: 500;
 }
 
 ul li {
@@ -700,23 +701,43 @@ Photo Gallery
 
 /* Photo Gallery Container */
 
+/* Photo Gallery Container */
 .photo-gallery {
-  height: auto;
+  max-height: 260px;
   width: auto;
   margin: 10px;
-  /*padding-bottom: 4px; */
   overflow-x: auto;
+  overflow-y: hidden;
   white-space: nowrap;
   scroll-behavior: smooth;
 
-  /* Modern Standard Scrollbar (Firefox) */
   scrollbar-width: auto;
   scrollbar-color: #4e4e4e #1e1e1e;
 }
 
+.scrolling-wrapper {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 3px;
+  padding-bottom: 8px;
+}
+
+figure {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  margin: 10px;
+  text-align: center;
+  color: #76c695;
+  font-size: 0.8em;
+  font-family: var(--font1);
+}
+
+
 /* WebKit Scrollbar (Chrome, Edge, Safari) */
 .photo-gallery::-webkit-scrollbar {
-  height: 6px; /* Adjusted to look sleek, 20px is usually way too chunky */
+  height: 6px;
 }
 
 .photo-gallery::-webkit-scrollbar-track {
@@ -726,25 +747,6 @@ Photo Gallery
 .photo-gallery::-webkit-scrollbar-thumb {
   background: #4e4e4e;
   border-radius: 4px;
-}
-
-/* Scrolling Wrapper & Content */
-
-.scrolling-wrapper {
-  display: flex;
-  gap: 3px;
-}
-
-figure {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: fit-content;
-  margin: 1em;
-  text-align: center;
-  color: #76c695;
-  font-size: 0.8em;
-  font-family: var(--font1);
 }
 
 figure img {
