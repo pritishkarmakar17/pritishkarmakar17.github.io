@@ -259,6 +259,11 @@ p {
   padding: 0 1em
 }
 
+pre {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
 
 h1 {
   font-family: var(--font2);
