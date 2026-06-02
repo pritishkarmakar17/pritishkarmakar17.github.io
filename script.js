@@ -302,7 +302,7 @@ const quoteText = document.getElementById("quoteText");
 const quoteSource = document.getElementById("quoteSource");
 
 const TOTAL_TYPING_TIME = 1000;
-const HOLD_TIME = 4000;
+const HOLD_TIME = 10000;
 
 function typeWriter(text, element, speed, callback) {
   element.textContent = "";
