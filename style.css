@@ -260,6 +260,7 @@ p {
 }
 
 pre {
+  font-size: large;
   white-space: pre-wrap;
   word-break: break-word;
 }
@@ -275,12 +276,15 @@ h2 {
   font-family: var(--font2);
   background-image: linear-gradient(to right, rgb(0 0 0 / 0.55), transparent 100%);
   font-weight: bold;
-  padding: 0.2em 0.2em;
+  padding: 0.2em 0.2em .2em .5em;
   margin-top: 15pt;
   margin-bottom: 5pt;
+  border-top-left-radius: .2em;
+  border-bottom-left-radius: .2em;
 }
 
 h3 {
+  /*font-family: var(--font2);*/
   font-size: 1.1rem;
   font-weight: 500;
   color: #d5d5d5;
@@ -291,7 +295,7 @@ h3 {
   letter-spacing: 0.03em;
   line-height: 1.3;
   /*border-left: 3px solid #00ff66;*/
-  /*padding-left: 0.6em;*/
+  padding-left: 0.5em;
 }
 
 h4 {
@@ -322,6 +326,7 @@ ul {
 ul li {
   padding: 0.2em;
 }
+
 
 html {
   scroll-behavior: smooth;
@@ -370,6 +375,7 @@ strong {
   text-align: left;
   max-width: 100%;
   box-sizing: border-box;
+  cursor: default;
 }
 
 .dashed-line {
@@ -937,6 +943,11 @@ Back to Top Button Styling
   ul {
     font-size: 0.9em;
   }
+
+  pre {
+    font-size: 1em;
+  }
+
   p {
     font-size: 0.9em;
   }
