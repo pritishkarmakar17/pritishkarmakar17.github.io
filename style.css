@@ -279,8 +279,7 @@ h2 {
   padding: 0.2em 0.2em .2em .5em;
   margin-top: 15pt;
   margin-bottom: 5pt;
-  border-top-left-radius: .2em;
-  border-bottom-left-radius: .2em;
+  border-radius: .2em;
 }
 
 h3 {
@@ -471,6 +470,7 @@ toggled heading
 
 details {
   margin-top: 0.5em;
+  overflow: hidden;
 }
 
 summary {
@@ -491,6 +491,9 @@ summary {
   font-family: "Cascadia Mono", monospace;
   font-weight: 700;
   transition: background 0.25s ease, border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  user-select: none;
 }
 
 summary:hover {
@@ -531,7 +534,20 @@ details[open] > summary::after {
 }
 
 details > div {
-  padding: 1em 0.2em 0.2em;
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 0 0.2em 0.2em;
+  max-height: 0;
+  opacity: 0;
+
+  transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+              opacity 0.3s ease,
+              padding 0.4s ease;
+}
+details[open] > div {
+  max-height: 1200px; /* Upper limit wrapper target larger than your content height */
+  opacity: 1;
+  padding-top: 1em;   /* Transitions the top padding smoothly into place */
 }
 
 
@@ -556,10 +572,35 @@ toggle show + hide details
   box-shadow: 4px 4px 0px rgb(129 236 195 / 0.5);
 }
 
-.hidden {
-  display: none;
+article > div,
+.hidden,
+div[class="hidden"] {
+  display: block;
+  overflow: hidden;
+
+  transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1),
+              opacity 0.3s ease,
+              padding 0.4s ease,
+              margin 0.4s ease;
 }
 
+/* The Expanded State (When .hidden is removed by your JS) */
+article > div {
+  max-height: 1200px;
+  opacity: 1;
+}
+
+/* The Collapsed State (When .hidden is present) */
+.hidden {
+  max-height: 0 !important;
+  opacity: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+
+  pointer-events: none;
+}
 
 
 /*---------------
