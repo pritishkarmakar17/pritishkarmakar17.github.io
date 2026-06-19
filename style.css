@@ -235,6 +235,13 @@ nav a.active-link {
   filter: drop-shadow(0 0 8px rgba(129, 236, 195, 0.15));
 }
 
+/* -----------------
+  Essential
+  -------------- */
+
+i,b {
+  color: #8bc39e;
+}
 
 a {
   color: #efefef;
@@ -335,6 +342,7 @@ html {
   /*background: #292929;*/
   background-image: linear-gradient(to right, rgb(41 41 41 / .2), #1c1c1c 100%);
   padding: 1em;
+  border: 1px dashed rgb(129 236 195 / 0);
   border-left: 2px solid #81ecc3;
   border-top-right-radius: 1.5em;
   border-bottom-right-radius: 1.5em;
@@ -343,16 +351,59 @@ html {
   margin-top: 1.5em;
 }
 
+.card:hover {
+  border: 1px dashed #81ecc3;
+  border-left: 2px solid #81ecc3;
+}
+
+.card-custom {
+  background-image:
+          /*linear-gradient(to right, rgb(41 41 41 / .2), #1c1c1c 100%),*/
+          radial-gradient(circle at 0% 0%, #590d0d 0%, transparent 50%),
+          radial-gradient(circle at 100% 0%, #491481 0%, transparent 50%),
+          radial-gradient(circle at 100% 100%, #629117 0%, transparent 50%),
+          radial-gradient(circle at 0% 100%, #0f7355 0%, transparent 50%);
+  padding: 1em;
+  /*border: 1px dashed rgb(129 236 195 / 0);*/
+  border-left: 4px solid #ffd700;
+  border-top-right-radius: 1.5em;
+  border-bottom-right-radius: 1.5em;
+  /*box-shadow: 0 0 10px rgba(0, 255, 102, 0.2);*/
+  margin-bottom: 2.5em;
+  margin-top: 1.5em;
+}
+
+.card-custom:hover {
+  border: 1px dashed #ffd700;
+  border-left: 4px solid #ffd700;
+}
+
+.text-gradient-custom {
+  font-family: var(--font2);
+  font-size: 1.5em;
+  font-weight: bold;
+  background-image: linear-gradient(to right, #ffac00, #ffd700);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  margin: 5pt 0pt;
+}
+
 .card2 {
   /*background: #393737;*/
   background-image: linear-gradient(to right, rgb(57 55 55 / 0.7), rgb(57 55 55 / 0.2), rgb(57 55 55 / 0.7));
-
   padding: 1em;
-  /*border: 2px dashed #659779;*/
+  border: 1px dashed rgb(129 236 195 / 0);
   border-radius: 1em;
   margin-bottom: 2em;
   display: block; /* Ensure it behaves as a block element */
   overflow: hidden; /* This will hide any text that overflows */
+}
+
+.card2:hover {
+  cursor: default;
+  border: 1px dashed #81ecc3;
 }
 
 strong {
