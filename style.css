@@ -585,20 +585,7 @@ details[open] > summary::after {
 }
 
 details > div {
-  overflow: hidden;
-  box-sizing: border-box;
-  padding: 0 0.2em 0.2em;
-  max-height: 0;
-  opacity: 0;
-
-  transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1),
-              opacity 0.3s ease,
-              padding 0.4s ease;
-}
-details[open] > div {
-  max-height: 1200px; /* Upper limit wrapper target larger than your content height */
-  opacity: 1;
-  padding-top: 1em;   /* Transitions the top padding smoothly into place */
+  padding: 1em 0.2em 0.2em;
 }
 
 
@@ -637,7 +624,7 @@ div[class="hidden"] {
 
 /* The Expanded State (When .hidden is removed by your JS) */
 article > div {
-  max-height: 1200px;
+  /*max-height: 1200px;*/
   opacity: 1;
 }
 
@@ -741,7 +728,7 @@ image box
   width: 170px;
   height: 170px;
   /*border: 2px solid #81ecc3; */
-  border-radius: 50%;
+  border-radius: 5%;
   overflow: hidden;
   margin: 2em;
 }
