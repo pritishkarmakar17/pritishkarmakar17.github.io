@@ -64,7 +64,7 @@
 
 :root {
   --font_welcome: "JetBrains Mono", monospace;
-  --font1: "CMU Serif", "Georgia";
+  --font1: 'Comic Sans MS',"CMU Serif", "Georgia";
   --font2: "Fira Code", monospace;
   --font_quote: "IBM Plex Mono", monospace;
 }
