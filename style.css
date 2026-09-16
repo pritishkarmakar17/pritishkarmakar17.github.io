@@ -64,9 +64,9 @@
 
 :root {
   --font_welcome: "JetBrains Mono", monospace;
-  --font1: 'Comic Sans MS',"CMU Serif", "Georgia";
-  --font2: "JetBrains Mono","Fira Code", monospace;
-  --font_quote: "IBM Plex Mono", monospace;
+  --font1: "Palatino Linotype", "Palatino", "URW Palladio L", "Georgia", serif;
+  --font2: "JetBrains Mono", "Fira Code", monospace;
+  --font_quote: "JetBrains Mono", "IBM Plex Mono", monospace;
 }
 
 
