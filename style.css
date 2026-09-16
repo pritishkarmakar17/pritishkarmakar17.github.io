@@ -65,7 +65,7 @@
 :root {
   --font_welcome: "JetBrains Mono", monospace;
   --font1: 'Comic Sans MS',"CMU Serif", "Georgia";
-  --font2: "Fira Code", monospace;
+  --font2: "JetBrains Mono","Fira Code", monospace;
   --font_quote: "IBM Plex Mono", monospace;
 }
 
@@ -282,7 +282,7 @@ h1 {
 h2 {
   font-family: var(--font2);
   background-image: linear-gradient(to right, rgb(0 0 0 / 0.55), transparent 100%);
-  font-weight: bold;
+  /*font-weight: bold;*/
   padding: 0.2em 0.2em .2em .5em;
   margin-top: 15pt;
   margin-bottom: 5pt;
